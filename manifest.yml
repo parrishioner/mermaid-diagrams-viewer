@@ -6,12 +6,16 @@ modules:
         function: resolver
       title: mermaid-diagrams-viewer
       description: Renders mermaid diagrams hosted in your source control system
+      config:
+        function: resolver-config
   function:
     - key: resolver
-      handler: index.run
+      handler: index.diagram
       providers:
         auth:
           - bitbucket
+    - key: resolver-config
+      handler: index.config
 app:
   id: ari:cloud:ecosystem::app/23392b90-4271-4239-98ca-a3e96c663cbb
 

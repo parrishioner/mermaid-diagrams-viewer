@@ -8,7 +8,8 @@
     "@forge/bridge": "^2.5.1",
     "mermaid": "^9.3.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-inlinesvg": "^3.0.1"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
