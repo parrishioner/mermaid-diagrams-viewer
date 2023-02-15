@@ -1,0 +1,56 @@
+modules:
+  macro:
+    - key: mermaid-diagrams-viewer
+      function: main
+      title: mermaid-diagrams-viewer
+      description: Renders mermaid diagrams hosted in your source control system
+  function:
+    - key: main
+      handler: index.run
+      providers:
+        auth:
+          - bitbucket
+app:
+  id: ari:cloud:ecosystem::app/23392b90-4271-4239-98ca-a3e96c663cbb
+
+remotes:
+  - key: bitbucket
+    baseUrl: https://bitbucket.org
+  - key: bitbucket-api
+    baseUrl: https://api.bitbucket.org
+
+permissions:
+  external:
+    fetch:
+      backend:
+        - https://bitbucket.org
+        - https://api.bitbucket.org
+
+providers:
+  auth:
+    - key: bitbucket
+      name: Bitbucket
+      scopes:
+        - repository
+        - snippet
+        - account
+      type: oauth2
+      clientId: paMEDYRZvXwGmwEWmD
+      remotes:
+        - bitbucket
+        - bitbucket-api
+      bearerMethod: authorization-header
+      actions:
+        authorization:
+          remote: bitbucket
+          path: /site/oauth2/authorize
+        exchange:
+          remote: bitbucket
+          path: /site/oauth2/access_token
+        retrieveProfile:
+          remote: bitbucket-api
+          path: /2.0/user
+          resolvers:
+            id: uuid
+            displayName: display_name
+            avatarUrl: links.avatar.href
