@@ -1,7 +1,7 @@
 modules:
   macro:
     - key: mermaid-diagrams-viewer
-      resource: main
+      resource: custom-ui
       resolver:
         function: resolver
       title: mermaid-diagrams-viewer
@@ -20,8 +20,8 @@ app:
   id: ari:cloud:ecosystem::app/23392b90-4271-4239-98ca-a3e96c663cbb
 
 resources:
-  - key: main
-    path: static/hello-world/build
+  - key: custom-ui
+    path: custom-ui/build
 
 remotes:
   - key: bitbucket
