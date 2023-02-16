@@ -31,6 +31,9 @@ remotes:
     baseUrl: https://api.bitbucket.org
 
 permissions:
+  content:
+    styles:
+      - 'unsafe-inline'
   external:
     fetch:
       backend:
