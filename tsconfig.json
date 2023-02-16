@@ -8,9 +8,12 @@
     "lib": ["dom", "es2017"],
     "types": ["node", "react"],
     "baseUrl": "./",
-    "allowJs": true,
+    "allowJs": false,
     "jsx": "react",
-    "jsxFactory": "ForgeUI.createElement"
+    "jsxFactory": "ForgeUI.createElement",
+    "outDir": "out",
+    "strict": true,
+    "skipLibCheck": true
   },
   "include": ["./src/**/*"]
 }
