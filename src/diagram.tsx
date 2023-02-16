@@ -15,6 +15,7 @@ resolver.define('getFile', async (req) => {
   // https://bitbucket.org/atlassian/diagrams/src/master/src/AccessNarrowing/ECORFC-131/filter-extensions.mmd
 
   const bitbucket = api.asUser().withProvider('bitbucket', 'bitbucket-api')
+
   if (!await bitbucket.hasCredentials()) {
     await bitbucket.requestCredentials()
   }
