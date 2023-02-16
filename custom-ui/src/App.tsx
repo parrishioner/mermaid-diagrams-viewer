@@ -16,7 +16,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchSVG().then(setData).catch(setError);
+    fetchSVG().then(setData).catch((e: Error) => setError(e.message));
   }, []);
 
   const loadingMessage = !data && !error ? 'Loading...' : null;
