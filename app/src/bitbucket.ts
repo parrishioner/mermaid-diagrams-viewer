@@ -1,5 +1,6 @@
 import Resolver from '@forge/resolver';
 import api from '@forge/api';
+import { convertFileUrl, validateFileUrl } from './lib/file-url';
 
 type Config = { url?: string } | undefined;
 
@@ -9,13 +10,13 @@ resolver.define('getFile', async (req) => {
   const config = req.context.extension.config as Config;
   console.log({ config });
 
-  const fileUrl = config?.url?.replace(
-    'https://bitbucket.org',
-    'https://api.bitbucket.org/2.0/repositories'
-  );
+  const fileUrl = config?.url;
 
-  // https://api.bitbucket.org/2.0/repositories/atlassian/diagrams/src/master/src/AccessNarrowing/ECORFC-131/filter-extensions.mmd
-  // https://bitbucket.org/atlassian/diagrams/src/master/src/AccessNarrowing/ECORFC-131/filter-extensions.mmd
+  if (!fileUrl) {
+    throw new Error('No file URL specified');
+  }
+
+  validateFileUrl(fileUrl);
 
   const bitbucket = api.asUser().withProvider('bitbucket', 'bitbucket-api');
 
@@ -23,10 +24,7 @@ resolver.define('getFile', async (req) => {
     await bitbucket.requestCredentials();
   }
 
-  if (!fileUrl) {
-    throw new Error('No file URL specified');
-  }
-  const response = await bitbucket.fetch(fileUrl);
+  const response = await bitbucket.fetch(convertFileUrl(fileUrl));
 
   if (!response.ok) {
     const errorResponse = await response.text();

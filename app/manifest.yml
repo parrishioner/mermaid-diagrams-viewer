@@ -13,7 +13,7 @@ modules:
         function: resolver-config
   function:
     - key: resolver
-      handler: diagram.run
+      handler: bitbucket.run
       providers:
         auth:
           - bitbucket

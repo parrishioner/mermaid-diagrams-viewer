@@ -20,8 +20,5 @@
     "outDir": "./build/app",
     "strict": true,
     "skipLibCheck": true
-  },
-  "include": [
-    "./src/**/*"
-  ]
+  }
 }

@@ -7,6 +7,9 @@
     "name": "Daniel Hreben",
     "email": "dhreben@atlassian.com"
   },
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "build": "tsc",
     "validate": "tsc --noEmit --project ./tsconfig.json",
