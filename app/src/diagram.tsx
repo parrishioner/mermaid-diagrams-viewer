@@ -9,19 +9,22 @@ resolver.define('getFile', async (req) => {
   const config = req.context.extension.config as Config;
   console.log({ config });
 
-  const fileUrl = config?.url?.replace('https://bitbucket.org', 'https://api.bitbucket.org/2.0/repositories');
+  const fileUrl = config?.url?.replace(
+    'https://bitbucket.org',
+    'https://api.bitbucket.org/2.0/repositories'
+  );
 
   // https://api.bitbucket.org/2.0/repositories/atlassian/diagrams/src/master/src/AccessNarrowing/ECORFC-131/filter-extensions.mmd
   // https://bitbucket.org/atlassian/diagrams/src/master/src/AccessNarrowing/ECORFC-131/filter-extensions.mmd
 
-  const bitbucket = api.asUser().withProvider('bitbucket', 'bitbucket-api')
+  const bitbucket = api.asUser().withProvider('bitbucket', 'bitbucket-api');
 
-  if (!await bitbucket.hasCredentials()) {
-    await bitbucket.requestCredentials()
+  if (!(await bitbucket.hasCredentials())) {
+    await bitbucket.requestCredentials();
   }
 
   if (!fileUrl) {
-    throw new Error('No file URL specified')
+    throw new Error('No file URL specified');
   }
   const response = await bitbucket.fetch(fileUrl);
 

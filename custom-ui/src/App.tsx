@@ -13,11 +13,16 @@ async function fetchSVG() {
 }
 
 function renderDiagram(svg: string) {
-  return <TransformWrapper>
-    <TransformComponent wrapperStyle={{ width: 'auto' }} contentStyle={{ width: 'auto' }}>
-      <SVG src={svg} />
-    </TransformComponent>
-  </TransformWrapper>
+  return (
+    <TransformWrapper>
+      <TransformComponent
+        wrapperStyle={{ width: 'auto' }}
+        contentStyle={{ width: 'auto' }}
+      >
+        <SVG src={svg} />
+      </TransformComponent>
+    </TransformWrapper>
+  );
 }
 
 function App() {
@@ -25,7 +30,9 @@ function App() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchSVG().then(setData).catch((e: Error) => setError(e.message));
+    fetchSVG()
+      .then(setData)
+      .catch((e: Error) => setError(e.message));
   }, []);
 
   const loadingMessage = !data && !error ? 'Loading...' : null;

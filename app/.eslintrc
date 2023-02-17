@@ -7,7 +7,11 @@
   "plugins": [
     "react-hooks"
   ],
+  "extends": [
+    "@atlassian/eslint-config-xen"
+  ],
   "rules": {
+    "no-console": "warn",
     "react-hooks/rules-of-hooks": "error"
   }
 }
