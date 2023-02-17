@@ -5,31 +5,9 @@ import SVG from 'react-inlinesvg';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import Banner from '@atlaskit/banner';
 import WarningIcon from '@atlaskit/icon/glyph/warning';
+import Spinner from '@atlaskit/spinner';
 
 mermaid.mermaidAPI.initialize({ startOnLoad: false });
-
-async function fetchSVG() {
-  const response = await invoke<ErrorResponse | SuccessResponse<string>>(
-    'getFile',
-    {}
-  );
-  const file = processResponse(response);
-  const svg = await mermaid.mermaidAPI.renderAsync('test', file);
-  return svg;
-}
-
-function renderDiagram(svg: string) {
-  return (
-    <TransformWrapper>
-      <TransformComponent
-        wrapperStyle={{ width: 'auto' }}
-        contentStyle={{ width: 'auto' }}
-      >
-        <SVG src={svg} />
-      </TransformComponent>
-    </TransformWrapper>
-  );
-}
 
 type ErrorResponse = {
   error: {
@@ -55,6 +33,33 @@ function processResponse<T>(response: ErrorResponse | SuccessResponse<T>) {
   return response.data;
 }
 
+async function fetchSVG() {
+  const response = await invoke<ErrorResponse | SuccessResponse<string>>(
+    'getFile',
+    {}
+  );
+  const file = processResponse(response);
+  const svg = await mermaid.mermaidAPI.renderAsync('test', file);
+  return svg;
+}
+
+const Diagram: React.FunctionComponent<{ svg?: string }> = (props) => {
+  if (!props.svg) {
+    return null;
+  }
+
+  return (
+    <TransformWrapper>
+      <TransformComponent
+        wrapperStyle={{ width: 'auto' }}
+        contentStyle={{ width: 'auto' }}
+      >
+        <SVG src={props.svg} />
+      </TransformComponent>
+    </TransformWrapper>
+  );
+};
+
 const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
   if (!props.error) {
     return null;
@@ -65,14 +70,29 @@ const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
       appearance="warning"
       icon={<WarningIcon label="" secondaryColor="inherit" />}
     >
+      Error while loading diagram:
       {props.error.message}
     </Banner>
   );
 };
 
+const LoadingDiagram: React.FunctionComponent<{ loading?: boolean }> = (
+  props
+) => {
+  if (!props.loading) {
+    return null;
+  }
+
+  return (
+    <div>
+      Loading diagram <Spinner interactionName="load" />
+    </div>
+  );
+};
+
 function App() {
-  const [data, setData] = useState<string | null>(null);
-  const [error, setError] = useState<ServerError | undefined>(undefined);
+  const [data, setData] = useState<string | undefined>();
+  const [error, setError] = useState<ServerError | undefined>();
 
   useEffect(() => {
     fetchSVG()
@@ -85,13 +105,10 @@ function App() {
       });
   }, []);
 
-  const loadingMessage = !data && !error ? 'Loading...' : null;
-  const dataComponent = data ? renderDiagram(data) : null;
-
   return (
     <div>
-      {loadingMessage}
-      {dataComponent}
+      <LoadingDiagram loading={!data && !error} />
+      <Diagram svg={data} />
       <ErrorMessage error={error} />
     </div>
   );

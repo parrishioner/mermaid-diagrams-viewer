@@ -7,10 +7,11 @@ modules:
       resource: custom-ui
       resolver:
         function: resolver
-      title: mermaid-diagrams-viewer
+      title: Diagrams viewer
       description: Renders mermaid diagrams hosted in your source control system
       config:
         function: resolver-config
+
   function:
     - key: resolver
       handler: bitbucket.run
