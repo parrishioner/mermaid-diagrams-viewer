@@ -29,9 +29,11 @@
     "@atlassian/eslint-config-xen": "^2.3.0",
     "jest": "^29.4.3",
     "prettier": "^2.8.4",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "source-map-explorer": "^2.5.3"
   },
   "scripts": {
+    "analyze": "source-map-explorer '../app/build/custom-ui/static/js/*.js'",
     "lint": "eslint src/**/*",
     "start": "react-scripts start",
     "build": "BUILD_PATH='../app/build/custom-ui' react-scripts build",
