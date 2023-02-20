@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { invoke } from '@forge/bridge';
 import mermaid from 'mermaid';
 import SVG from 'react-inlinesvg';
@@ -33,14 +33,13 @@ function processResponse<T>(response: ErrorResponse | SuccessResponse<T>) {
   return response.data;
 }
 
-async function fetchSVG() {
+async function fetchFile() {
   const response = await invoke<ErrorResponse | SuccessResponse<string>>(
     'getFile',
     {}
   );
   const file = processResponse(response);
-  const svg = await mermaid.mermaidAPI.renderAsync('test', file);
-  return svg;
+  return file;
 }
 
 const Diagram: React.FunctionComponent<{ svg?: string }> = (props) => {
@@ -76,9 +75,7 @@ const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
   );
 };
 
-const LoadingDiagram: React.FunctionComponent<{ loading?: boolean }> = (
-  props
-) => {
+const Loading: React.FunctionComponent<{ loading?: boolean }> = (props) => {
   if (!props.loading) {
     return null;
   }
@@ -91,12 +88,33 @@ const LoadingDiagram: React.FunctionComponent<{ loading?: boolean }> = (
 };
 
 function App() {
-  const [data, setData] = useState<string | undefined>();
+  const [file, setFile] = useState<string | undefined>();
+
+  const [size, setSize] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+
   const [error, setError] = useState<ServerError | undefined>();
 
   useEffect(() => {
-    fetchSVG()
-      .then(setData)
+    const onResize = () => {
+      const newSize = {
+        height: window.innerHeight,
+        width: window.innerWidth,
+      };
+      if (newSize.height !== size.height || newSize.width !== size.width) {
+        setSize(newSize);
+      }
+    };
+
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  useEffect(() => {
+    fetchFile()
+      .then(setFile)
       .catch((error) => {
         if (error instanceof ServerError) {
           return setError(error);
@@ -105,10 +123,17 @@ function App() {
       });
   }, []);
 
+  const svg = useMemo(() => {
+    if (!file) {
+      return;
+    }
+    return mermaid.mermaidAPI.render('diagram' + Date.now(), file);
+  }, [file, size]);
+
   return (
     <div>
-      <LoadingDiagram loading={!data && !error} />
-      <Diagram svg={data} />
+      <Loading loading={!svg && !error} />
+      <Diagram svg={svg} />
       <ErrorMessage error={error} />
     </div>
   );
