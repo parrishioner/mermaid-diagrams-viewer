@@ -9,14 +9,14 @@ const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
   if (!props.error) {
     return null;
   }
+  const msg = `Error while loading diagram: ${props.error.message}`;
 
   return (
     <Banner
       appearance="warning"
       icon={<WarningIcon label="" secondaryColor="inherit" />}
     >
-      Error while loading diagram:
-      {props.error.message}
+      {msg}
     </Banner>
   );
 };
@@ -27,8 +27,13 @@ const Loading: React.FunctionComponent<{ loading?: boolean }> = (props) => {
   }
 
   return (
-    <div>
-      Loading diagram <Spinner interactionName="load" />
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <Spinner size="large" />
     </div>
   );
 };
@@ -50,7 +55,7 @@ function App() {
   const [error, setError] = useState<ServerError | undefined>();
 
   return (
-    <div>
+    <div style={{ minHeight: '200px' }}>
       <Loading loading={!file && !error} />
       <Diagram file={file} />
       <ErrorMessage error={error} />
