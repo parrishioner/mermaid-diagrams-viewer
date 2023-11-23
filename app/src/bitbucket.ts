@@ -48,7 +48,7 @@ resolver.define('getFile', async (req) => {
     validateFileUrl(fileUrl);
 
     const bitbucket = api.asUser().withProvider('bitbucket', 'bitbucket-api');
-
+    console.log(await bitbucket.listCredentials());
     if (!(await bitbucket.hasCredentials())) {
       await bitbucket.requestCredentials();
     }

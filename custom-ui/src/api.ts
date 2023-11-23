@@ -29,6 +29,8 @@ export async function getFile() {
     'getFile',
     {}
   );
+
+  console.log(response);
   const file = processResponse(response);
   return file;
 }
