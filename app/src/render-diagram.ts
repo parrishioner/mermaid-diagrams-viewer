@@ -12,7 +12,7 @@ addErrorFormatter(MissingDiagram, {
   code: 'DIAGRAM_IS_NOT_SELECTED',
 });
 
-resolver.define('getFile', async (req) => {
+resolver.define('getCode', async (req) => {
   try {
     const config = req.context.extension.config as Config | undefined;
 

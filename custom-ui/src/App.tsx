@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '@atlaskit/banner';
 import WarningIcon from '@atlaskit/icon/glyph/warning';
 import Spinner from '@atlaskit/spinner';
-import { getFile, ServerError } from './api';
+import { getCode, ServerError } from './api';
 import { Diagram } from './diagram';
 
 const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
@@ -42,7 +42,7 @@ function App() {
   const [file, setFile] = useState<string | undefined>();
 
   useEffect(() => {
-    getFile()
+    getCode()
       .then(setFile)
       .catch((error) => {
         if (error instanceof ServerError) {

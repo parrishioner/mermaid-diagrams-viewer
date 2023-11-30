@@ -24,9 +24,9 @@ function processResponse<T>(response: ErrorResponse | SuccessResponse<T>) {
   return response.data;
 }
 
-export async function getFile() {
+export async function getCode() {
   const response = await invoke<ErrorResponse | SuccessResponse<string>>(
-    'getFile',
+    'getCode',
     {}
   );
 
