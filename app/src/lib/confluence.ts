@@ -1,3 +1,4 @@
+import { traverse } from '@atlaskit/adf-utils/traverse';
 import api, { route } from '@forge/api';
 
 export async function getPageContent(pageId: string, isEditing: boolean) {
@@ -16,4 +17,17 @@ export async function getPageContent(pageId: string, isEditing: boolean) {
   const adf = JSON.parse(pageResponseBody.body.atlas_doc_format.value);
 
   return adf;
+}
+
+export function findCodeBlocks(adf: any) {
+  const codeBlocks: string[] = [];
+
+  traverse(adf, {
+    codeBlock: (node) => {
+      const text = node.content?.[0]?.text?.trim() || '';
+      codeBlocks.push(text);
+    },
+  });
+
+  return codeBlocks;
 }

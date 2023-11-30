@@ -8,12 +8,11 @@ import ForgeUI, {
   Option,
   useConfig,
 } from '@forge/ui';
-import { traverse } from '@atlaskit/adf-utils/traverse';
-import { getPageContent } from './lib/confluence';
+import { findCodeBlocks, getPageContent } from './lib/confluence';
 import { Config } from './lib/config';
 
 const DiagramConfig = () => {
-  const [diagrams, setDiagrams] = useState<string[]>([]);
+  const [codeBlocks, setCodeBlocks] = useState<string[]>([]);
 
   const context = useProductContext();
   const config = useConfig() as Config | undefined;
@@ -22,41 +21,21 @@ const DiagramConfig = () => {
     const isEditing = true;
 
     const adf = await getPageContent(context.contentId!, isEditing);
-
-    const diagrams: string[] = [];
-    const titleRegexp = /title\s+(.+)\n/i;
-
-    traverse(adf, {
-      codeBlock: (node) => {
-        console.log(node);
-        const text = node.content?.[0]?.text?.trim();
-        if (!text) {
-          return;
-        }
-
-        const title = text.match(titleRegexp)?.[1];
-        if (!title) {
-          return;
-        }
-        diagrams.push(title);
-      },
-    });
-    console.log({ diagrams });
-    setDiagrams(diagrams);
+    setCodeBlocks(findCodeBlocks(adf));
   }, []);
 
   return (
     <MacroConfig>
       <Select
         label="Select codeblock with mermaid diagram to render"
-        name="diagram"
+        name="index"
       >
-        {diagrams.map((diagram) => {
+        {codeBlocks.map((codeBlock, i) => {
           return (
             <Option
-              label={diagram}
-              value={diagram}
-              defaultSelected={config?.diagram === diagram}
+              label={`${i + 1} - ${codeBlock.substring(0, 35)}...`}
+              value={i}
+              defaultSelected={config?.index === i}
             />
           );
         })}

@@ -1,1 +1,1 @@
-export type Config = { diagram?: string };
+export type Config = { index?: number };

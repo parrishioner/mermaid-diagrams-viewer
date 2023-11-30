@@ -1,8 +1,7 @@
-import { traverse } from '@atlaskit/adf-utils/traverse';
 import { isForgePlatformError } from '@forge/api';
 import Resolver from '@forge/resolver';
 import { addErrorFormatter, formatError, isInternalError } from './lib/error';
-import { getPageContent } from './lib/confluence';
+import { findCodeBlocks, getPageContent } from './lib/confluence';
 import { Config } from './lib/config';
 
 const resolver = new Resolver();
@@ -17,7 +16,7 @@ resolver.define('getFile', async (req) => {
   try {
     const config = req.context.extension.config as Config | undefined;
 
-    if (!config?.diagram) {
+    if (config?.index === undefined) {
       throw new MissingDiagram('No diagram selected');
     }
 
@@ -28,24 +27,16 @@ resolver.define('getFile', async (req) => {
       isEditing
     );
 
-    let data = '';
+    const codeBlock = findCodeBlocks(adf)[config.index];
 
-    traverse(adf, {
-      codeBlock: (node) => {
-        console.log(node);
-        const text = node.content?.[0]?.text || '';
-        if (text.includes(config.diagram!)) {
-          data = text;
-        }
-      },
-    });
-
-    if (!data) {
-      throw new MissingDiagram(`Diagram ${config.diagram} not found`);
+    if (!codeBlock) {
+      throw new MissingDiagram(
+        `Code block under with position ${config.index + 1} not found`
+      );
     }
 
     return {
-      data,
+      data: codeBlock,
     };
   } catch (error: any) {
     if (isForgePlatformError(error)) {
