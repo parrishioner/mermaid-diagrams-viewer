@@ -42,46 +42,52 @@ async function getPageContent(
   return adf;
 }
 
-export async function getCode(_retryCount: number = 0) {
+export async function getCode() {
   const context = await view.getContext();
   const extension = context.extension as Extension;
 
-  const index = getIndexFromConfig(extension.config);
-  const adf = await getPageContent(extension.content.id, extension.isEditing);
+  const run = async (_retryCount = 0): Promise<string> => {
+    const index = getIndexFromConfig(extension.config);
+    const adf = await getPageContent(extension.content.id, extension.isEditing);
+    if (index === undefined) {
+      const macroToCodeBlockMap = autoMapMacroToCodeBlock(
+        adf,
+        context.moduleKey,
+      );
 
-  if (index === undefined) {
-    const macroToCodeBlockMap = autoMapMacroToCodeBlock(adf, context.moduleKey);
+      if (!macroToCodeBlockMap.has(context.localId) && _retryCount < 10) {
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        return run(_retryCount + 1);
+      }
 
-    if (!macroToCodeBlockMap.has(context.localId) && _retryCount < 10) {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      return getCode(_retryCount + 1);
-    }
+      const code = macroToCodeBlockMap.get(context.localId);
+      if (code) {
+        return code;
+      }
 
-    const code = macroToCodeBlockMap.get(context.localId);
-    if (code) {
+      if (code === undefined) {
+        throw new ServerError(
+          `Can't find codeblock to render automatically; Please select one in the macro settings`,
+          'DIAGRAM_IS_NOT_SELECTED',
+        );
+      }
+
       return code;
     }
 
-    if (code === undefined) {
+    const codeBlocks = findCodeBlocks(adf);
+    const codeBlock = codeBlocks[index];
+    if (!codeBlock) {
       throw new ServerError(
-        `Can't find codeblock to render automatically; Please select one in the macro settings`,
+        `Code block under with position ${index + 1} not found`,
         'DIAGRAM_IS_NOT_SELECTED',
       );
     }
 
-    return code;
-  }
+    return codeBlock;
+  };
 
-  const codeBlocks = findCodeBlocks(adf);
-  const codeBlock = codeBlocks[index];
-  if (!codeBlock) {
-    throw new ServerError(
-      `Code block under with position ${index + 1} not found`,
-      'DIAGRAM_IS_NOT_SELECTED',
-    );
-  }
-
-  return codeBlock;
+  return run();
 }
 
 function getIndexFromConfig(config: Config | undefined): number | undefined {

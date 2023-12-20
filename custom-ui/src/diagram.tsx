@@ -49,6 +49,7 @@ export const Diagram: React.FunctionComponent<{
       <TransformComponent
         contentStyle={{
           width: size.width,
+          justifyContent: 'center',
         }}
       >
         <SVG src={svg} />
