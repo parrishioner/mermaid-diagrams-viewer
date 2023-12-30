@@ -99,12 +99,11 @@
     prosemirror-utils "1.2.0"
     prosemirror-view "1.31.6"
 
-"@atlaskit/icon@^21.11.5":
-  version "21.12.8"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-21.12.8.tgz#51af17f3a15824bf1e01fe959e98bd9a4af8d15e"
-  integrity sha512-cKqjg51VHZv8RTsncGhaSJAk8tWx6lrgRLM4zMexHbP3MBS1vcW7A+jZa2zggA3NOW7rsGZ3yFdbq8J6kPGT+A==
+"@atlaskit/icon@^22.0.0":
+  version "22.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-22.0.0.tgz#f267fe623827eb4ddf3b1632756049d04d19a8b7"
+  integrity sha512-90sfTQ7O6vehzNY8Qm2SCufwmQQ3A5Pw40yHBEHD5XeiJ0BaGY8fmzxx16JcqLxiUfyDlxml3rsKD++XzksOHg==
   dependencies:
-    "@atlaskit/theme" "^12.6.0"
     "@atlaskit/tokens" "^1.28.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
