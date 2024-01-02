@@ -1,18 +1,26 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SVG from 'react-inlinesvg';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+// eslint-disable-next-line node/no-missing-import
 import mermaid from 'mermaid';
 
-mermaid.mermaidAPI.initialize({ startOnLoad: false });
-
 export const Diagram: React.FunctionComponent<{
-  code?: string;
+  code: string;
+  colorMode: 'light' | 'dark';
   onError: CallableFunction;
-}> = ({ code, onError }) => {
+}> = ({ code, colorMode, onError }) => {
   const [size, setSize] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
+
+  const { svg, error } = useMermaidRenderSVG(code, colorMode);
+
+  useEffect(() => {
+    if (error) {
+      onError(error);
+    }
+  }, [error, onError]);
 
   useEffect(() => {
     const onResize = () => {
@@ -30,20 +38,6 @@ export const Diagram: React.FunctionComponent<{
     };
   }, [size.height, size.width]);
 
-  const svg = useMemo(() => {
-    if (!code) {
-      return '';
-    }
-
-    try {
-      const newSvg = mermaid.mermaidAPI.render('diagram' + Date.now(), code);
-      return newSvg;
-    } catch (error) {
-      onError(error);
-      return '';
-    }
-  }, [code, onError]);
-
   return (
     <TransformWrapper>
       <TransformComponent
@@ -57,3 +51,41 @@ export const Diagram: React.FunctionComponent<{
     </TransformWrapper>
   );
 };
+
+function useMermaidRenderSVG(code: string, colorMode: 'light' | 'dark') {
+  const [svg, setSvg] = useState<string>('');
+  const [error, setError] = useState<Error>();
+
+  useEffect(() => {
+    mermaid.mermaidAPI.initialize({
+      startOnLoad: false,
+      theme: colorMode,
+      darkMode: colorMode === 'dark',
+      themeVariables: {
+        darkMode: colorMode === 'dark',
+      },
+    });
+  }, [colorMode]);
+
+  useEffect(() => {
+    const run = async () => {
+      if (!code) {
+        return;
+      }
+
+      try {
+        const { svg } = await mermaid.mermaidAPI.render(
+          'diagram' + Date.now(),
+          code,
+        );
+        setSvg(svg);
+      } catch (error) {
+        setError(error as Error);
+      }
+    };
+
+    void run();
+  }, [code, colorMode]);
+
+  return { svg, error };
+}

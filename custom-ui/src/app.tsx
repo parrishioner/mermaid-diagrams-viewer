@@ -4,6 +4,10 @@ import WarningIcon from '@atlaskit/icon/glyph/warning';
 import Spinner from '@atlaskit/spinner';
 import { getCode, ServerError } from './api';
 import { Diagram } from './diagram';
+import { token, useThemeObserver } from '@atlaskit/tokens';
+import { view } from '@forge/bridge';
+
+void view.theme.enable();
 
 const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
   if (!props.error) {
@@ -21,11 +25,7 @@ const ErrorMessage: React.FunctionComponent<{ error?: Error }> = (props) => {
   );
 };
 
-const Loading: React.FunctionComponent<{ loading?: boolean }> = (props) => {
-  if (!props.loading) {
-    return null;
-  }
-
+const Loading: React.FunctionComponent<{ loading?: boolean }> = () => {
   return (
     <div
       style={{
@@ -39,10 +39,12 @@ const Loading: React.FunctionComponent<{ loading?: boolean }> = (props) => {
 };
 
 function App() {
-  const [code, setCode] = useState<string | undefined>();
+  const [code, setCode] = useState<string>();
+  const [error, setError] = useState<ServerError | undefined>();
+  const { colorMode } = useThemeObserver();
 
   useEffect(() => {
-    getCode()
+    void getCode()
       .then(setCode)
       .catch((error) => {
         if (error instanceof ServerError) {
@@ -63,16 +65,22 @@ function App() {
       });
   }, []);
 
-  const [error, setError] = useState<ServerError | undefined>();
-
   const onError = (error: ServerError) => {
     setError(error);
   };
 
   return (
-    <div style={{ minHeight: '150px' }}>
-      <Loading loading={!code && !error} />
-      <Diagram code={code} onError={onError} />
+    <div
+      style={{
+        minHeight: '150px',
+        backgroundColor: token('elevation.surface'),
+        borderRadius: '3px',
+      }}
+    >
+      {code === undefined && error === undefined ? <Loading /> : null}
+      {code !== undefined && colorMode ? (
+        <Diagram code={code} colorMode={colorMode} onError={onError} />
+      ) : null}
       <ErrorMessage error={error} />
     </div>
   );
