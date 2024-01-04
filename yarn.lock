@@ -151,14 +151,14 @@
     bind-event-listener "^2.1.1"
     tiny-invariant "^1.2.0"
 
-"@atlaskit/spinner@^15.3.4":
-  version "15.6.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-15.6.1.tgz#ac6c9b740205cb873212ca2a3912595c73336dd3"
-  integrity sha512-PMsAF2oeIZIQ+DDiUThkDDBQxvhqNnMpMgbmAbSOEK+/MIUzmjZ1nwSMYSHRiimJ1H8pmDJZVoO+vhnUzG4pjA==
+"@atlaskit/spinner@^16.0.0":
+  version "16.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-16.0.0.tgz#e59f2bea3aaafaf5b0e23999d96cb1c5fc777a90"
+  integrity sha512-KZq+YiwO9lb9VFHBZisVq5/ToyhkhxgLSmPIIm8K+mHoTt7CGk9+Iz04Oui5OYg6Sq5XN1SVklWCuDEhiJcmlQ==
   dependencies:
     "@atlaskit/interaction-context" "^2.1.0"
     "@atlaskit/theme" "^12.6.0"
-    "@atlaskit/tokens" "^1.26.0"
+    "@atlaskit/tokens" "^1.28.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
