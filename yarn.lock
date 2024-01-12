@@ -185,9 +185,9 @@
     bind-event-listener "^2.1.1"
 
 "@atlaskit/tokens@^1.31.0":
-  version "1.32.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.32.0.tgz#eb56d0878e593045209e0d33fe9d2dded74c809a"
-  integrity sha512-sv2i+EyvQ1bugvFlJOpvdTm/j68SOsN6XX3OaZOvsE8lFmloLRE/Y5mj5pgZlWi5U00Q3VrEo/SQ3khs7qGG0w==
+  version "1.33.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.33.0.tgz#083f475df9c1dd73a1a52de872dc8a821830f5c7"
+  integrity sha512-BNec7Ktfc68Gq8FvNLri+GpOlE2/cqazU7W5g3lZlCyr14euUnoHPEe9xYfafzPEwMYSAff5Q9kCPNJdCh7UXA==
   dependencies:
     "@atlaskit/ds-lib" "^2.2.0"
     "@atlaskit/platform-feature-flags" "^0.2.0"
