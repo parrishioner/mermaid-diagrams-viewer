@@ -766,16 +766,16 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@forge/api@^2.21.0":
-  version "2.22.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-2.22.1.tgz#3ecafc63816669b1b0b7d9d28d8c6a2a7365dfb7"
-  integrity sha512-rX7BRIZs94ojfnI5MF5Zpgbr1zoZ5tY4O2LHREGVhPP0pYsnY17rbjZbdrRhGQdlg3rvJSj98K5vOBCsqT6hfA==
+"@forge/api@^3.0.0":
+  version "3.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-3.0.0.tgz#2025a865973df9df9fb703ba30c0274a5d5359af"
+  integrity sha512-3S/FNumoXmpQ60T0fGMukfZFwiPmtUczmoMSOfzN83E12DnkhpQX7rjL3pLlOcB7vnEpQ5ZmIphOg+fy7ZR6Zw==
   dependencies:
     "@forge/auth" "0.0.5"
-    "@forge/egress" "1.2.11"
-    "@forge/storage" "1.5.13"
-    "@forge/util" "1.3.3"
-    "@types/node-fetch" "^2.6.9"
+    "@forge/egress" "1.2.12"
+    "@forge/storage" "1.5.14"
+    "@forge/util" "1.4.0"
+    "@types/node-fetch" "^2.6.10"
     node-fetch "2.7.0"
 
 "@forge/auth@0.0.5":
@@ -792,17 +792,17 @@
   dependencies:
     "@types/history" "^4.7.11"
 
-"@forge/egress@1.2.11":
-  version "1.2.11"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/egress/-/egress-1.2.11.tgz#3b56fd6a1a6d25043ba1e77add0a426390cc58b7"
-  integrity sha512-8dOzntU1BqFUlU1+6cLnKBZSTmKraijfo3lPf80AE223yFjlJNIWpN2JAxSmn9WtmHBoMwaTMLE6P2FOWU28Cw==
+"@forge/egress@1.2.12":
+  version "1.2.12"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/egress/-/egress-1.2.12.tgz#bd2ab4b663d3d43bad89c382fea5cfd3ab6c6918"
+  integrity sha512-uMVFLqhf0o8nq5lR5cbspviM0+uKqAnfAY7YE6rOMZdBUfbNpP2m4HqQzzZA8sr7iWqnxC1HDHMIaC4FrX5fgg==
   dependencies:
     minimatch "^9.0.3"
 
-"@forge/storage@1.5.13":
-  version "1.5.13"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/storage/-/storage-1.5.13.tgz#e94551f7cc34d66e850254ad8e126b7b1846a96a"
-  integrity sha512-V9BSggOxeu/r0LMHLwLTndvTkxwn57UAF4Q6zQ+huJ0Q6UGKjuo7eBtw4JTH4bQFPrAqj1Kh64ebtK6F3naN+w==
+"@forge/storage@1.5.14":
+  version "1.5.14"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/storage/-/storage-1.5.14.tgz#bf5f5f437271538b4415ccd2fdadef4db89623e7"
+  integrity sha512-N84NM3fnFG8mdpxSLoKgfbSX0QFanck0Vuf6Y3eV31vK0K2hKNZz8K2WLTG7DL7W8yKrZmpZlqiZtbJ0+aBgag==
 
 "@forge/ui@1.10.3":
   version "1.10.3"
@@ -816,10 +816,10 @@
     sha.js "^2.4.11"
     tslib "^2.6.2"
 
-"@forge/util@1.3.3":
-  version "1.3.3"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.3.3.tgz#f9b6d955d66deeaad6a81a09ca4799ce69be94a6"
-  integrity sha512-1NoFdXxLIwunRSJqEjyFDPC0oQpYEV+hMROl1Nw/Jv6mNg4RHFDVnXSzqThyKa35FeiQ6ZfpbGC40cSQFzM57Q==
+"@forge/util@1.4.0":
+  version "1.4.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.4.0.tgz#c3ddb2b58c5e57a06826f1e3616b1fb691023468"
+  integrity sha512-rMRQtw8IZteNjQs9DLRqcc73rbCG3JVRy7xjieHAtchARx+uAjnaNtiW95TCuj40O2sCzdRzH746DG56jkadLw==
   dependencies:
     ts-is-present "^1.2.2"
     webpack "5.89.0"
@@ -1388,10 +1388,10 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/ms/-/ms-0.7.34.tgz#10964ba0dee6ac4cd462e2795b6bebd407303433"
   integrity sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==
 
-"@types/node-fetch@^2.6.9":
-  version "2.6.9"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/node-fetch/-/node-fetch-2.6.9.tgz#15f529d247f1ede1824f7e7acdaa192d5f28071e"
-  integrity sha512-bQVlnMLFJ2d35DkPNjEPmd9ueO/rh5EiaZt2bhqiSarPjZIuIV6bPQVqcrEyvNo+AfTrRGVazle1tl597w3gfA==
+"@types/node-fetch@^2.6.10":
+  version "2.6.11"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/node-fetch/-/node-fetch-2.6.11.tgz#9b39b78665dae0e82a08f02f4967d62c66f95d24"
+  integrity sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==
   dependencies:
     "@types/node" "*"
     form-data "^4.0.0"
