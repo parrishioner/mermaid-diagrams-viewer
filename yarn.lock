@@ -84,12 +84,12 @@
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/css-reset@^6.0.1":
-  version "6.6.2"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.6.2.tgz#fbc82c16ebf2ed7456fcc0a43101ecc27cfe0a89"
-  integrity sha512-UfLXRmSN2Bbg9LDfMpMB3lYOorCs491Y4AcPCsOPMUcg7clLoVOUBY9+gHHR9rxfx7XC2oXIt9TP/UgOSzv7aQ==
+  version "6.7.1"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.7.1.tgz#aa7ee80fb2f584ca5d682a777f7519f970e19ed4"
+  integrity sha512-Sb07C13/NfBCbduk03ytiQkyn48SJ7Epj1rVB/5Z3NB9aeHZrWIKJjajKbwpJmBq0f3apKn9LMhhm+QKodzeOw==
   dependencies:
     "@atlaskit/theme" "^12.6.0"
-    "@atlaskit/tokens" "^1.29.0"
+    "@atlaskit/tokens" "^1.42.0"
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
 
@@ -221,7 +221,7 @@
     "@atlaskit/tokens" "^1.25.0"
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/tokens@^1.25.0", "@atlaskit/tokens@^1.29.0":
+"@atlaskit/tokens@^1.25.0":
   version "1.29.2"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.29.2.tgz#0f909d5315c002bcda6349039d11c544c0c23351"
   integrity sha512-gxJSfvpDPmVDPt76swB1GFPhrAlKcKnmKtyP/I18amBbvvW3dmcPWJn94f1e78Aax363ozfcmGbsYj/NK3bZ6A==
