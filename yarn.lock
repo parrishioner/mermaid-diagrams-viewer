@@ -66,12 +66,12 @@
     bind-event-listener "^2.1.1"
 
 "@atlaskit/banner@^12.0.10":
-  version "12.1.23"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-12.1.23.tgz#6caef1eb31a54bc58b40edf81080333d32a43d91"
-  integrity sha512-mK8AkFBU9oEYy1uWtGcLLwl/IDSsss2WOjHZewCFc6b9gssgFQuiPMTpUhntwYJvLfKzzDOmQNx2sECbLb8JiQ==
+  version "12.2.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-12.2.0.tgz#c86bab683aa84761ec91ef4c28147b0b5a571fdd"
+  integrity sha512-0Phhem7KSGti2dc9QDvgkVAg+MpIAw7PiNr0qBGxMpOJqPiH0RPqDADZ4ywvrjItGLUGWFUYI3pMar1zUY+r2A==
   dependencies:
     "@atlaskit/primitives" "^5.1.0"
-    "@atlaskit/theme" "^12.6.0"
+    "@atlaskit/theme" "^12.7.0"
     "@atlaskit/tokens" "^1.42.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
@@ -219,6 +219,16 @@
     "@atlaskit/codemod-utils" "^4.2.0"
     "@atlaskit/ds-lib" "^2.2.0"
     "@atlaskit/tokens" "^1.25.0"
+    "@babel/runtime" "^7.0.0"
+
+"@atlaskit/theme@^12.7.0":
+  version "12.7.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-12.7.0.tgz#aae68b916ad88349054a557882de4bf030d3971d"
+  integrity sha512-x5hVwMpfb2AD1VF9mUOeYzFAiZE4RVFDpyfaLmJ+YsNe6RSzz547krGeiCvrRGrQbfFPMtg5Xq3G1oZC8cLQow==
+  dependencies:
+    "@atlaskit/codemod-utils" "^4.2.0"
+    "@atlaskit/ds-lib" "^2.2.0"
+    "@atlaskit/tokens" "^1.42.0"
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/tokens@^1.25.0":
