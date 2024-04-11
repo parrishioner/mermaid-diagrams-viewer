@@ -862,14 +862,14 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@forge/api@^3.0.0":
-  version "3.2.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-3.2.0.tgz#4b07dd3c662915957e5dd5a1919ea7791222116f"
-  integrity sha512-vC8PJihTeQhwmPZ4pEvAfWLxR0a2XgDf1RzabtQUOITqco3IOybRN35mpbpaLhxuX3rW/shGULe3Dl9Pd/nO9g==
+  version "3.3.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-3.3.0.tgz#b27886ba8ee8d301b26a1f5b790ed550c195d1ba"
+  integrity sha512-xnO4qfRP2Ocr8SIXTkV/hhhqDFHdS4FwOFhqOsdFw93e7d07XcsxO+MbCa+wEulMwnvd8hlgE+HZCQlKa8krrQ==
   dependencies:
     "@forge/auth" "0.0.5"
     "@forge/egress" "1.2.13"
     "@forge/storage" "1.5.15"
-    "@forge/util" "1.4.1"
+    "@forge/util" "1.4.2"
     "@types/node-fetch" "^2.6.11"
     node-fetch "2.7.0"
 
@@ -899,25 +899,25 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/storage/-/storage-1.5.15.tgz#821582dde8a714e8a650429f1b6c5d8ee1fd9194"
   integrity sha512-n4AWXkzMA4Pv4nam+dTu7PHgDQtMwaAF2MalOWF323zGvYKS/gZJY+7efJq0DLP783iTfjvYT879EHhCrfvEXA==
 
-"@forge/ui@1.11.0":
-  version "1.11.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/ui/-/ui-1.11.0.tgz#e6343095f8ecc7534139622c44610ae95056966a"
-  integrity sha512-06Vy34gYagM2PMh2RmVAVor3JXA7/kIVM4TZbR8oH5gCBqAOvUPXpOnY8UO8I26GrBZuXNSt4nEqBVCWakwJ/A==
+"@forge/ui@1.11.1":
+  version "1.11.1"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/ui/-/ui-1.11.1.tgz#9a5bf0c911dc4e1f56cc44926a14cb5879ef11c6"
+  integrity sha512-xiShuJSKVmutO7TSBp5JfXkszy8ODAD/yyZIpPKhxdUyr/FCVbuXp1EytAmBuzMMeMEcwKJS3HNG3NExNVrmgw==
   dependencies:
     "@types/jest" "^29.5.12"
     "@types/node" "14.18.63"
-    "@types/react" "^18.2.55"
+    "@types/react" "^18.2.64"
     fast-json-stable-stringify "^2.1.0"
     sha.js "^2.4.11"
     tslib "^2.6.2"
 
-"@forge/util@1.4.1":
-  version "1.4.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.4.1.tgz#8b2761fe3e0b2e501daaef1c0c23563b1e3fea32"
-  integrity sha512-QE4KLTknl/zmJNHnLqL21LEDtZmrfwjk69fOjM1Sq7BYGEuO5UeoIm9F+6AiuA+maPTP85bV0ZWOeWbaO7H6Og==
+"@forge/util@1.4.2":
+  version "1.4.2"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.4.2.tgz#d32517a8a6a5b2908193c2409dd80b4203de0c90"
+  integrity sha512-xqD+tg5pj4ILHXVrLbpAVmmEubLf0omp6PgpimzUXjM8lbfVopKH9EV5Pg3IZeaTYNJBBRiaDC+XHlTUsZjtFA==
   dependencies:
     ts-is-present "^1.2.2"
-    webpack "5.90.1"
+    webpack "5.90.3"
     webpack-cli "^5.1.4"
 
 "@fortawesome/fontawesome-free@^6.5.1":
@@ -1553,10 +1553,18 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.2.37", "@types/react@^18.2.39", "@types/react@^18.2.55":
+"@types/react@*", "@types/react@^18.2.37", "@types/react@^18.2.39":
   version "18.2.74"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react/-/react-18.2.74.tgz#2d52eb80e4e7c4ea8812c89181d6d590b53f958c"
   integrity sha512-9AEqNZZyBx8OdZpxzQlaFEVCSFUM2YXJH46yPOiOpm078k6ZLOCcuAzGum/zK8YBwY+dbahVNbHrbgrAwIRlqw==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.2.64":
+  version "18.2.75"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react/-/react-18.2.75.tgz#45d18f384939306d35312def1bf532eb38a68562"
+  integrity sha512-+DNnF7yc5y0bHkBTiLKqXFe+L4B3nvOphiMY3tuA5X10esmjqk7smyBZzbGTy2vsiy/Bnzj8yFIBL8xhRacoOg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -5839,10 +5847,10 @@ webpack-sources@^3.2.3:
   resolved "https://packages.atlassian.com/api/npm/npm-remote/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@5.90.1:
-  version "5.90.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/webpack/-/webpack-5.90.1.tgz#62ab0c097d7cbe83d32523dbfbb645cdb7c3c01c"
-  integrity sha512-SstPdlAC5IvgFnhiRok8hqJo/+ArAbNv7rhU4fnWGHNVfN59HSQFaxZDSAL3IFG2YmqxuRs+IU33milSxbPlog==
+webpack@5.90.3:
+  version "5.90.3"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/webpack/-/webpack-5.90.3.tgz#37b8f74d3ded061ba789bb22b31e82eed75bd9ac"
+  integrity sha512-h6uDYlWCctQRuXBs1oYpVe6sFcWedl0dpcVaTf/YF67J9bKvwJajFulMVSYKHrksMB3I/pIagRzDxwxkebuzKA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^1.0.5"
