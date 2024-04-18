@@ -93,12 +93,12 @@
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/css-reset@^6.0.1":
-  version "6.7.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.7.1.tgz#aa7ee80fb2f584ca5d682a777f7519f970e19ed4"
-  integrity sha512-Sb07C13/NfBCbduk03ytiQkyn48SJ7Epj1rVB/5Z3NB9aeHZrWIKJjajKbwpJmBq0f3apKn9LMhhm+QKodzeOw==
+  version "6.8.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.8.0.tgz#7ae924009cd791b263beb37edace8eb5d7e9b584"
+  integrity sha512-y517L4aWDXAOPOdksmNNZ2AiAkCojsoY4H66Hf8GR9IvyU7qFXUPFgA1mocIw6Rr2ZrlrsAob5y8/yKopzmq9A==
   dependencies:
-    "@atlaskit/theme" "^12.6.0"
-    "@atlaskit/tokens" "^1.42.0"
+    "@atlaskit/theme" "^12.7.0"
+    "@atlaskit/tokens" "^1.43.0"
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
 
@@ -262,7 +262,7 @@
     "@babel/types" "^7.20.0"
     bind-event-listener "^2.1.1"
 
-"@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.42.0":
+"@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.42.0", "@atlaskit/tokens@^1.43.0":
   version "1.43.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.43.0.tgz#5ef193f65019b51717b59b0c99c30db55d7be980"
   integrity sha512-3rRxGRnJGQBVKGqNqy+Zuad3xuDZ7uD+aFGRcU2OpLuIpiFLX95agDZ9w0HGzNiDw9eWi2f1j8Uzq06AyaRqTw==
@@ -290,18 +290,6 @@
   version "1.39.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.39.1.tgz#67658be23609ec1d4c5482c1c953094945dcbff5"
   integrity sha512-sU5HpX1ys2MsDfJdTSrJFI24IcKcuxJEPuu9GLyyfXE5NV/H3SgKHqzLhTaZbWfqXuhtxPP+qkUmaWkdaRUHTQ==
-  dependencies:
-    "@atlaskit/ds-lib" "^2.2.0"
-    "@atlaskit/platform-feature-flags" "^0.2.0"
-    "@babel/runtime" "^7.0.0"
-    "@babel/traverse" "^7.23.2"
-    "@babel/types" "^7.20.0"
-    bind-event-listener "^2.1.1"
-
-"@atlaskit/tokens@^1.43.0":
-  version "1.43.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.43.0.tgz#5ef193f65019b51717b59b0c99c30db55d7be980"
-  integrity sha512-3rRxGRnJGQBVKGqNqy+Zuad3xuDZ7uD+aFGRcU2OpLuIpiFLX95agDZ9w0HGzNiDw9eWi2f1j8Uzq06AyaRqTw==
   dependencies:
     "@atlaskit/ds-lib" "^2.2.0"
     "@atlaskit/platform-feature-flags" "^0.2.0"
