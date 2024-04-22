@@ -93,9 +93,9 @@
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/css-reset@^6.0.1":
-  version "6.8.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.8.0.tgz#7ae924009cd791b263beb37edace8eb5d7e9b584"
-  integrity sha512-y517L4aWDXAOPOdksmNNZ2AiAkCojsoY4H66Hf8GR9IvyU7qFXUPFgA1mocIw6Rr2ZrlrsAob5y8/yKopzmq9A==
+  version "6.9.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-6.9.0.tgz#8e834605424e9fa4f02d2dd6a21f0fda776a7e9b"
+  integrity sha512-7FYba8pAQz/VRbE1UidANtlqCml81gYPUhLzd87wAUCXXI8RvbBEI43MVqFCTbhemXXJUT3OMOfNRhPyYjcUAQ==
   dependencies:
     "@atlaskit/theme" "^12.7.0"
     "@atlaskit/tokens" "^1.43.0"
