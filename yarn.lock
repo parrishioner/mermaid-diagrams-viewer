@@ -842,14 +842,14 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@forge/api@^3.0.0":
-  version "3.4.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-3.4.0.tgz#067de8368fbb73a75115f4c4bef740a17b40748d"
-  integrity sha512-NCI5eBlAhnPvwVRtj6tUiYALe1c/ljydproVs0BgpRYPsO/qDAKxzjALjWBe8Qy9IOKK7aPZ7SeZ9tp0PG/LrA==
+  version "3.7.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-3.7.0.tgz#e52e440873e4040a43f151ad573325b127b94622"
+  integrity sha512-27NEYEllSlvl8og3CxWlbSPV++fJasF8o+VZzxNaUofwod36K1BlWFzRmhNrYfjyDzNOzfmyWQirZeXzrteFRQ==
   dependencies:
     "@forge/auth" "0.0.5"
     "@forge/egress" "1.2.13"
     "@forge/storage" "1.5.15"
-    "@forge/util" "1.4.2"
+    "@forge/util" "1.4.3"
     "@types/node-fetch" "^2.6.11"
     node-fetch "2.7.0"
 
@@ -861,9 +861,9 @@
     tslib "^2.6.2"
 
 "@forge/bridge@^3.1.0":
-  version "3.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/bridge/-/bridge-3.3.0.tgz#fe18ec35da0578deb37750284e932c9a6adacd40"
-  integrity sha512-5adN4Yedb1I+Gx5aJyq42euIuIFvVC/7FSe5E32GpC+gGsgVacGtqseCJH0qkiJ7iz4jj8KHAXwdZz8AiyGCxw==
+  version "3.4.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/bridge/-/bridge-3.4.0.tgz#c3f50822314a81e5e971ad6b9fe2ea8ac95f336c"
+  integrity sha512-iezUBkqaKxdtNDxllXU8KEibhcZLsLpzdWGsIsDwdyI2cmNevHf0nBZq/OxKSSlYtL8aDm9mdXJhZR3Ph1E13g==
   dependencies:
     "@types/history" "^4.7.11"
 
@@ -891,10 +891,10 @@
     sha.js "^2.4.11"
     tslib "^2.6.2"
 
-"@forge/util@1.4.2":
-  version "1.4.2"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.4.2.tgz#d32517a8a6a5b2908193c2409dd80b4203de0c90"
-  integrity sha512-xqD+tg5pj4ILHXVrLbpAVmmEubLf0omp6PgpimzUXjM8lbfVopKH9EV5Pg3IZeaTYNJBBRiaDC+XHlTUsZjtFA==
+"@forge/util@1.4.3":
+  version "1.4.3"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/util/-/util-1.4.3.tgz#857631f5466737eb9b460de76f07b38ba7791f37"
+  integrity sha512-CdnsuTv5cl8cifwaBkrw2l1dWHcQ08+/KSyattgucNrO4ci2cJPUQMJWo08XTLqZ2Na79xsGMjTY9bcb6h5LUA==
   dependencies:
     ts-is-present "^1.2.2"
     webpack "5.90.3"
