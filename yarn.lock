@@ -64,13 +64,13 @@
     bind-event-listener "^2.1.1"
 
 "@atlaskit/banner@^12.0.10":
-  version "12.3.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-12.3.1.tgz#2697182baa4bdf37054dcbb79afbc7f9c911d2df"
-  integrity sha512-CARg6eJzlOp17IRIxFmItHTl6tVhaPpcSr5GdlkK9mr8rq7wrEqf9IEkjRvkO+1te6FV4eK4iWrC5aFG8MzkbA==
+  version "12.4.2"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-12.4.2.tgz#46c012699b304e50b2b24afb45a3893d8bf9738a"
+  integrity sha512-igfTkxC0R60qV2vydxNQVCr11pa2Ksui7MtdPNaXoaO6ruzzlMFjNaWTKyhQcVpmyXKsJOfuo2y+txsVD1BkPg==
   dependencies:
-    "@atlaskit/primitives" "^6.0.0"
-    "@atlaskit/theme" "^12.7.0"
-    "@atlaskit/tokens" "^1.45.0"
+    "@atlaskit/primitives" "^9.0.0"
+    "@atlaskit/theme" "^12.11.0"
+    "@atlaskit/tokens" "^1.53.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
@@ -99,6 +99,15 @@
     "@atlaskit/tokens" "^1.43.0"
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.17.0"
+
+"@atlaskit/css@^0.3.0":
+  version "0.3.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css/-/css-0.3.0.tgz#f0baf4caeeb568db7207016668903b97ee513d67"
+  integrity sha512-vzkguj9fKF9HkyO8wmfCUL8ZgOs6rTqvZHC0bQtjAVRHWicScnZY3Rj0IyUTo/qlsVI5aFHcByloM/izjUYnmA==
+  dependencies:
+    "@atlaskit/tokens" "^1.51.0"
+    "@babel/runtime" "^7.0.0"
+    "@compiled/react" "^0.17.2"
 
 "@atlaskit/ds-lib@^2.2.0":
   version "2.2.3"
@@ -175,22 +184,23 @@
     bind-event-listener "^3.0.0"
     tiny-invariant "^1.2.0"
 
-"@atlaskit/primitives@^6.0.0":
-  version "6.0.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-6.0.0.tgz#3349103e2f0d3c6dddfdf92eea8143bebada43d5"
-  integrity sha512-ZbeQ1sZH2ZimTMxQZvNXd9jJU5a3DBu44VMKNyqu0nDQZ4DoLrvDQuqak+Fx7i2PrVvc7k4Txy85Ik34pD4HOA==
+"@atlaskit/primitives@^9.0.0":
+  version "9.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-9.0.0.tgz#6c1141eb8d918c2eae72058aa8a27806fa62d7bb"
+  integrity sha512-uAM8TrffOnn9yNNU+BNh8w3MvM5Z+KR6whBf1BWHNJasb8C/RBFHN9yEC/g6Aq/txgYh3S9ggkcIbZBsRujjnQ==
   dependencies:
     "@atlaskit/analytics-next" "^9.3.0"
     "@atlaskit/app-provider" "^1.3.0"
-    "@atlaskit/css" "^0.1.0"
+    "@atlaskit/css" "^0.3.0"
     "@atlaskit/ds-lib" "^2.3.0"
     "@atlaskit/interaction-context" "^2.1.0"
-    "@atlaskit/tokens" "^1.45.0"
-    "@atlaskit/visually-hidden" "^1.3.0"
+    "@atlaskit/tokens" "^1.53.0"
+    "@atlaskit/visually-hidden" "^1.4.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
     "@emotion/serialize" "^1.1.0"
     bind-event-listener "^3.0.0"
+    react-uid "^2.2.0"
     tiny-invariant "^1.2.0"
 
 "@atlaskit/spinner@^16.0.0":
@@ -204,6 +214,16 @@
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
+"@atlaskit/theme@^12.11.0":
+  version "12.11.1"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-12.11.1.tgz#5650403e5849742fd903140c8a77bb830f08db41"
+  integrity sha512-VXn/Kc6BzVsW9bH+8RpIUGKeTN550mB1te7uUnbMiuft2PYEKgXXp63BW0kdXNVgOW/tHhLERCSboxhNmzOgWg==
+  dependencies:
+    "@atlaskit/codemod-utils" "^4.2.0"
+    "@atlaskit/ds-lib" "^2.3.0"
+    "@atlaskit/tokens" "^1.53.0"
+    "@babel/runtime" "^7.0.0"
+
 "@atlaskit/theme@^12.7.0":
   version "12.7.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-12.7.0.tgz#aae68b916ad88349054a557882de4bf030d3971d"
@@ -214,7 +234,7 @@
     "@atlaskit/tokens" "^1.42.0"
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.42.0", "@atlaskit/tokens@^1.43.0", "@atlaskit/tokens@^1.45.0":
+"@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.42.0", "@atlaskit/tokens@^1.43.0", "@atlaskit/tokens@^1.51.0", "@atlaskit/tokens@^1.53.0":
   version "1.53.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.53.0.tgz#76f196a243b390baf1f639d25cab8485515670a3"
   integrity sha512-gBQf8Mw5bp79/mSedYc4ifS/DyyBpbQKfr7JeT0+MBENyX1HBg58cviMEz+vxOTzkfwjV5SBMEhsUdJsRqiQXQ==
@@ -258,10 +278,10 @@
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
-"@atlaskit/visually-hidden@^1.3.0":
-  version "1.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/visually-hidden/-/visually-hidden-1.3.0.tgz#0b050dfae282664068571780e65b906acd6a5734"
-  integrity sha512-iOHCxRnhNV3gnqOHuyLOnsFibfHpr1T28XUPYZjtN9bDQbn1GdSDYLoIHnLK+2enqdILirsuUWi93mWM3dCCwg==
+"@atlaskit/visually-hidden@^1.4.0":
+  version "1.4.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/visually-hidden/-/visually-hidden-1.4.0.tgz#048d2fb4bf77fc97ca2b7d7a41cb5d9d3dc2e04f"
+  integrity sha512-dVmq+G38awmRP0QIB0aWniqCkY5x3zSgfIaSXZhJYe3n2GA2xCWJpVok/AccTcGqqlMP/Bl3i+N2nfe+Q7A8sw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
@@ -598,6 +618,13 @@
   version "0.17.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@compiled/react/-/react-0.17.0.tgz#effd0fd99b78b6bed22c81f154d9b9105a35b625"
   integrity sha512-0I0kYIIdzeofxtJHOmAzo/9Tc39AdGwyvCd4uwwYkns4VJAMXdPVmUp8HPZJJmmsgbtxklDjJpw7hCMljhnK8A==
+  dependencies:
+    csstype "^3.1.2"
+
+"@compiled/react@^0.17.2":
+  version "0.17.2"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@compiled/react/-/react-0.17.2.tgz#df29864575c0f5846627095b659ec1ba958736b5"
+  integrity sha512-/HA19vIqMnfM6sz1mwqdYABae2oocJ1xoWR87zU7oyH6uk6+L58hlhloQy5GJ5BtdWZl+50DLAFY53GVecD8VA==
   dependencies:
     csstype "^3.1.2"
 
@@ -4848,6 +4875,13 @@ react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
+
+react-uid@^2.2.0:
+  version "2.3.3"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/react-uid/-/react-uid-2.3.3.tgz#6a485ccc868555997f3506c6db97a3e735d97adf"
+  integrity sha512-iNpDovcb9qBpBTo8iUgqRSQOS8GV3bWoNaTaUptHkXtAooXSo0OWe7vN6TqqB8x3x0bNBbQx96kkmSltQ5h9kQ==
+  dependencies:
+    tslib "^2.0.0"
 
 react-zoom-pan-pinch@^3.0.0:
   version "3.4.4"
