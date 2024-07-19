@@ -165,6 +165,13 @@
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+"@atlaskit/platform-feature-flags@^0.3.0":
+  version "0.3.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/platform-feature-flags/-/platform-feature-flags-0.3.0.tgz#94dfa0a4ef0a140f6ab0a6de006464de925ecea7"
+  integrity sha512-/0u5fFJ0Rw2j4M5wzsXgaHO6Ey12oekPCDTRvmmAIp4GO9T2Swbl80bavLAPSOmSHMhHTSuvRxiJveZXfQ21IQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 "@atlaskit/primitives@^5.1.2":
   version "5.7.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-5.7.0.tgz#a30bb3cb7962ce55e16281c912e26790a00b1363"
@@ -234,12 +241,12 @@
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.42.0", "@atlaskit/tokens@^1.43.0", "@atlaskit/tokens@^1.49.0", "@atlaskit/tokens@^1.51.0", "@atlaskit/tokens@^1.53.0":
-  version "1.53.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.53.0.tgz#76f196a243b390baf1f639d25cab8485515670a3"
-  integrity sha512-gBQf8Mw5bp79/mSedYc4ifS/DyyBpbQKfr7JeT0+MBENyX1HBg58cviMEz+vxOTzkfwjV5SBMEhsUdJsRqiQXQ==
+  version "1.55.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.55.0.tgz#3df0fb38324c522f6298178d3b7dd20e489f9d83"
+  integrity sha512-h9pOIZezo1cP6doW1wtpo/NkUoEznUIHufOBvhLRdmwfGe/w9qlGeewvdF3o6Se4gsPO/Yn7WHy6Bhom+LdKgg==
   dependencies:
     "@atlaskit/ds-lib" "^2.3.0"
-    "@atlaskit/platform-feature-flags" "^0.2.0"
+    "@atlaskit/platform-feature-flags" "^0.3.0"
     "@babel/runtime" "^7.0.0"
     "@babel/traverse" "^7.23.2"
     "@babel/types" "^7.20.0"
