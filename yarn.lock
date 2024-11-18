@@ -191,9 +191,9 @@
     prosemirror-view "1.31.6"
 
 "@atlaskit/icon@^22.0.0":
-  version "22.22.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-22.22.0.tgz#d4129d6d745605cefa0b43d7931cab6cd9d7d608"
-  integrity sha512-4uUxjT37zvxyqIF0VyDJiSfDMSXu0IIAW61Osob5/S3JGEZ2yRR5zXKXRgCFI7iNTwqilFswNw1L1V7t1qB2rQ==
+  version "22.24.1"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-22.24.1.tgz#cbd9a1adfeb28d077d47029cf83fe8886d0936db"
+  integrity sha512-4Gw2xNsbVt+BTsVFnDBPw1YDcebWYA1bSDW1snZvGQw/XCrG1bw3bWQZFWIhKN51hYhPajf+JdMxmCH+YVFe5A==
   dependencies:
     "@atlaskit/platform-feature-flags" "^0.3.0"
     "@atlaskit/tokens" "^2.0.0"
