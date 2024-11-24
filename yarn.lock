@@ -53,26 +53,6 @@
     prop-types "^15.5.10"
     use-memo-one "^1.1.1"
 
-"@atlaskit/analytics-next@^9.3.0":
-  version "9.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/analytics-next/-/analytics-next-9.3.0.tgz#eace7b9e2de486778213ba53a64f7b1909a9c0b9"
-  integrity sha512-mR5CndP92k2gFl8sWu4DJZZEpEQ4bnp5Z3fWCZE1oySiOKK8iM+KzKH4FMCaSUGOhWW6/5VeuXCcXvaogaAmsA==
-  dependencies:
-    "@atlaskit/analytics-next-stable-react-context" "1.0.1"
-    "@atlaskit/platform-feature-flags" "^0.2.2"
-    "@babel/runtime" "^7.0.0"
-    prop-types "^15.5.10"
-    use-memo-one "^1.1.1"
-
-"@atlaskit/app-provider@^1.3.0":
-  version "1.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/app-provider/-/app-provider-1.3.0.tgz#277bdebc0c91fc9e7d5126a9472ac11b4c1e2a23"
-  integrity sha512-0bHfIbXyCbYjuv0zMyHPyuCcyW5IIVCBsNbYEbEl9w5P9hChPyewNrz1VkNPRQBg18DF1zxIIsNyZOEuQjvs7Q==
-  dependencies:
-    "@atlaskit/tokens" "^1.43.0"
-    "@babel/runtime" "^7.0.0"
-    bind-event-listener "^2.1.1"
-
 "@atlaskit/app-provider@^1.4.0":
   version "1.4.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/app-provider/-/app-provider-1.4.1.tgz#3e20f426f86bcdfd33ddcfd7d400a8baa861134d"
@@ -109,15 +89,6 @@
     "@atlaskit/tokens" "^2.0.0"
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/css@^0.1.0":
-  version "0.1.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css/-/css-0.1.0.tgz#6efad00bab85fdcd679fc78fd7af918e1ec9efc1"
-  integrity sha512-FQfiLoYJrwTYhjSpa+RA8omPAPlJ5rl0OCJ0NAkMXRGx1o8ItNBW5EcRBwW0wUHaBOZ4oFS5EUshk185E/G/zQ==
-  dependencies:
-    "@atlaskit/tokens" "^1.43.0"
-    "@babel/runtime" "^7.0.0"
-    "@compiled/react" "^0.17.0"
-
 "@atlaskit/css@^0.6.0":
   version "0.6.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css/-/css-0.6.0.tgz#36584f03b12d61ec813500892f524525624787a3"
@@ -126,22 +97,6 @@
     "@atlaskit/tokens" "^2.0.0"
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.1"
-
-"@atlaskit/ds-lib@^2.3.0":
-  version "2.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/ds-lib/-/ds-lib-2.3.0.tgz#ed82039b1ca1c2e3b865864f11a05e955a93e06c"
-  integrity sha512-ULU9ZTVBvlQ9QUwKXhCju3/fUWT79zdX5omNYOIL3nUrAtBCPX7inNpIJ/D4Lx35O6XSWJRKuNFL5tR75FEYKQ==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    bind-event-listener "^2.1.1"
-
-"@atlaskit/ds-lib@^2.4.0":
-  version "2.4.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/ds-lib/-/ds-lib-2.4.0.tgz#5d7be8de22966c30d567c4ecb7977e2ecfb3594f"
-  integrity sha512-G2rQEzRcstHhFXaGeIqaavD5FzgCWeRYqo3rmUGJ/Gr0HHHVGZwMU8p2GWs1Tk5VPI/oO86SpJzyXDhxCNaSKw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    bind-event-listener "^3.0.0"
 
 "@atlaskit/ds-lib@^2.6.0":
   version "2.6.0"
@@ -207,13 +162,6 @@
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/platform-feature-flags@^0.2.0", "@atlaskit/platform-feature-flags@^0.2.2":
-  version "0.2.5"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/platform-feature-flags/-/platform-feature-flags-0.2.5.tgz#bc36b042bc960efaa5f2d71bc9b815f14c0f7f25"
-  integrity sha512-0fD2aDxn2mE59D4acUhVib+YF2HDYuuPH50aYwpQdcV/CsVkAaJsMKy8WhWSulcRFeMYp72kfIfdy0qGdRB7Uw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-
 "@atlaskit/platform-feature-flags@^0.3.0":
   version "0.3.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/platform-feature-flags/-/platform-feature-flags-0.3.0.tgz#94dfa0a4ef0a140f6ab0a6de006464de925ecea7"
@@ -240,24 +188,6 @@
     bind-event-listener "^3.0.0"
     tiny-invariant "^1.2.0"
 
-"@atlaskit/primitives@^5.1.2":
-  version "5.7.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-5.7.0.tgz#a30bb3cb7962ce55e16281c912e26790a00b1363"
-  integrity sha512-eCLyHN1BllNpwqA2YqCmYpqwoiNVcW3R6bHrpKmsW8uvPE/+Bd45hOiPwvCPJUPyK1ZNMfnkegWKkoxcmjMYIQ==
-  dependencies:
-    "@atlaskit/analytics-next" "^9.3.0"
-    "@atlaskit/app-provider" "^1.3.0"
-    "@atlaskit/css" "^0.1.0"
-    "@atlaskit/ds-lib" "^2.3.0"
-    "@atlaskit/interaction-context" "^2.1.0"
-    "@atlaskit/tokens" "^1.44.0"
-    "@atlaskit/visually-hidden" "^1.2.4"
-    "@babel/runtime" "^7.0.0"
-    "@emotion/react" "^11.7.1"
-    "@emotion/serialize" "^1.1.0"
-    bind-event-listener "^3.0.0"
-    tiny-invariant "^1.2.0"
-
 "@atlaskit/spinner@^16.0.0":
   version "16.3.3"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-16.3.3.tgz#14fc8246f1e1ae280d52e2fc0727905c0718cf02"
@@ -269,16 +199,6 @@
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
-"@atlaskit/theme@^13.0.0":
-  version "13.0.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-13.0.0.tgz#d59899b2ed3a596a7aa6adffd718ab871c961c12"
-  integrity sha512-tvyFtHrRDvEUvLM8B7f9O6vtqB5Aappev73jsU+Btp5oyDqIh/3SBeDWRR2n/AiROoWqhDBQoesUdNBi0+QB+A==
-  dependencies:
-    "@atlaskit/codemod-utils" "^4.2.0"
-    "@atlaskit/ds-lib" "^2.4.0"
-    "@atlaskit/tokens" "^1.58.0"
-    "@babel/runtime" "^7.0.0"
-
 "@atlaskit/theme@^14.0.0":
   version "14.0.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-14.0.0.tgz#d9ef367a1084e112a3779b5cd5c8979f71a39f37"
@@ -289,36 +209,12 @@
     "@atlaskit/tokens" "^2.0.0"
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/tokens@^1.31.0", "@atlaskit/tokens@^1.43.0":
+"@atlaskit/tokens@^1.31.0":
   version "1.61.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.61.0.tgz#101856f96be03daaaeb3a756d68a665af297de06"
   integrity sha512-gRkBDZOaQffJHg9g+hYFgPjQ0Hz4XIDaK5WEttIGyhi2USsGsvDvUeED8liqcQNwssH/5UFxIFp3FmEwo0DoFA==
   dependencies:
     "@atlaskit/ds-lib" "^2.6.0"
-    "@atlaskit/platform-feature-flags" "^0.3.0"
-    "@babel/runtime" "^7.0.0"
-    "@babel/traverse" "^7.23.2"
-    "@babel/types" "^7.20.0"
-    bind-event-listener "^3.0.0"
-
-"@atlaskit/tokens@^1.44.0":
-  version "1.44.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.44.1.tgz#7e521f722882eec3d4cc162ef62362b163a6ad28"
-  integrity sha512-q+wlC0nUNmZTtsgJhPefcVxE94g+jPmUD5SJOnxOKkrH1rXsRSWqroG/xOSV2fvbXMkZwXw0lHU4crWqQiu4+A==
-  dependencies:
-    "@atlaskit/ds-lib" "^2.3.0"
-    "@atlaskit/platform-feature-flags" "^0.2.0"
-    "@babel/runtime" "^7.0.0"
-    "@babel/traverse" "^7.23.2"
-    "@babel/types" "^7.20.0"
-    bind-event-listener "^3.0.0"
-
-"@atlaskit/tokens@^1.58.0":
-  version "1.58.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-1.58.0.tgz#6af7c95c0504c585fcb68396d0a7b5af6a6c8f5b"
-  integrity sha512-bDp5/I2+NMlMPb5EwBvfamBWiHgKWl/Zbo2hocIhGDt7WB0enyeG9/VYd231T+5zMhGX1oQ+BWkAHN+K7aKGgw==
-  dependencies:
-    "@atlaskit/ds-lib" "^2.4.0"
     "@atlaskit/platform-feature-flags" "^0.3.0"
     "@babel/runtime" "^7.0.0"
     "@babel/traverse" "^7.23.2"
@@ -348,14 +244,6 @@
     "@babel/traverse" "^7.23.2"
     "@babel/types" "^7.20.0"
     bind-event-listener "^3.0.0"
-
-"@atlaskit/visually-hidden@^1.2.4":
-  version "1.2.5"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/visually-hidden/-/visually-hidden-1.2.5.tgz#062a5f0915ae1456740dfa24f329a432f2a019cc"
-  integrity sha512-khxJB6456uMS1IkwnsH0ZTYGVAnE83aoGarz388I0zPydOZdNeeEdwsRPFOn9mua88Ez+rL0OEWV22k6XRUf6A==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    "@emotion/react" "^11.7.1"
 
 "@atlaskit/visually-hidden@^1.5.0":
   version "1.5.0"
@@ -849,13 +737,6 @@
   version "6.0.4"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@braintree/sanitize-url/-/sanitize-url-6.0.4.tgz#923ca57e173c6b232bbbb07347b1be982f03e783"
   integrity sha512-s3jaWicZd0pkP0jf5ysyHUI/RE7MHos6qlToFcGWXVp+ykHOy77OUMrfbgJ9it2C5bow7OIQwYYaHjk9XlBQ2A==
-
-"@compiled/react@^0.17.0":
-  version "0.17.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@compiled/react/-/react-0.17.0.tgz#effd0fd99b78b6bed22c81f154d9b9105a35b625"
-  integrity sha512-0I0kYIIdzeofxtJHOmAzo/9Tc39AdGwyvCd4uwwYkns4VJAMXdPVmUp8HPZJJmmsgbtxklDjJpw7hCMljhnK8A==
-  dependencies:
-    csstype "^3.1.2"
 
 "@compiled/react@^0.18.1":
   version "0.18.1"
@@ -2260,11 +2141,6 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
-
-bind-event-listener@^2.1.1:
-  version "2.1.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/bind-event-listener/-/bind-event-listener-2.1.1.tgz#5e57290181af3027ff53ba6109e417a1e3cbb6f3"
-  integrity sha512-O+a5c0D2se/u2VlBJmPRn45IB6R4mYMh1ok3dWxrIZ2pmLqzggBhb875mbq73508ylzofc0+hT9W41x4Y2s8lg==
 
 bind-event-listener@^3.0.0:
   version "3.0.0"
