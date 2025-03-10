@@ -9,18 +9,24 @@ modules:
       resource: custom-ui
       title: Mermaid diagram
       description: Render a Mermaid diagram from a code block on a page
+      categories:
+        - formatting
+        - confluence-content
+        - visuals
+        - development
       config:
-        function: render-diagram-config
-
-  function:
-    - key: render-diagram-config
-      handler: render-diagram-config.run
+        resource: macro-config
+        viewportSize: small
+        render: native
+        title: Mermaid diagram configuration
 
 resources:
   - key: custom-ui
     path: build/custom-ui
     tunnel:
       port: 5173
+  - key: macro-config
+    path: src/config.tsx
 
 permissions:
   scopes:

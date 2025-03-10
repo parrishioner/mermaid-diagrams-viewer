@@ -16,7 +16,6 @@
     "baseUrl": "./",
     "allowJs": false,
     "jsx": "react",
-    "jsxFactory": "ForgeUI.createElement",
     "outDir": "./build/app",
     "strict": true,
     "skipLibCheck": true

@@ -1,10 +1,9 @@
-import { requestConfluence, view } from '@forge/bridge';
+import { view } from '@forge/bridge';
 import { Config } from 'shared/src/config';
 import {
-  ADFEntity,
-  PageResponseBody,
   autoMapMacroToCodeBlock,
   findCodeBlocks,
+  getPageContent,
 } from 'shared/src/confluence';
 export class ServerError extends Error {
   constructor(
@@ -19,38 +18,6 @@ interface Extension {
   isEditing: boolean;
   config: Config | undefined;
   content: { id: string };
-}
-
-async function getPageContent(
-  pageId: string,
-  isEditing: boolean,
-): Promise<ADFEntity> {
-  let pageResponse = await requestConfluence(
-    `/wiki/api/v2/pages/${pageId}?body-format=atlas_doc_format&get-draft=${isEditing.toString()}`,
-    {
-      headers: {
-        Accept: 'application/json',
-      },
-    },
-  );
-
-  if (pageResponse.status === 404) {
-    pageResponse = await requestConfluence(
-      `/wiki/api/v2/blogposts/${pageId}?body-format=atlas_doc_format&get-draft=${isEditing.toString()}`,
-      {
-        headers: {
-          Accept: 'application/json',
-        },
-      },
-    );
-  }
-
-  const pageResponseBody = (await pageResponse.json()) as PageResponseBody;
-  const adf = JSON.parse(
-    pageResponseBody.body.atlas_doc_format.value,
-  ) as ADFEntity;
-
-  return adf;
 }
 
 export async function getCode() {

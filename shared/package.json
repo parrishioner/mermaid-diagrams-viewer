@@ -6,6 +6,7 @@
     "lib": "./src"
   },
   "dependencies": {
-    "@atlaskit/adf-utils": "^19.0.13"
+    "@atlaskit/adf-utils": "^19.0.13",
+    "@forge/bridge": "^4.4.1"
   }
 }
