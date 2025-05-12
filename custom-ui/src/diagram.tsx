@@ -118,14 +118,19 @@ function useMermaidRenderSVG(code: string, colorMode: 'light' | 'dark') {
   const [error, setError] = useState<Error>();
 
   useEffect(() => {
-    const isDarkMode = colorMode === 'dark';
+    const [theme, darkMode] = (
+      {
+        light: ['default', false],
+        dark: ['dark', true],
+      } as const
+    )[colorMode];
 
     mermaid.initialize({
       startOnLoad: false,
-      theme: colorMode,
-      darkMode: isDarkMode,
+      theme,
+      darkMode,
       themeVariables: {
-        darkMode: isDarkMode,
+        darkMode,
       },
       securityLevel: 'antiscript', // allows usage of HTML tags, except <script>
     });

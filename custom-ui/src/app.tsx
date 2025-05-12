@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Banner from '@atlaskit/banner';
 import WarningIcon from '@atlaskit/icon/glyph/warning';
 import Spinner from '@atlaskit/spinner';
-import { getCode, ServerError } from './api';
 import { Diagram } from './diagram';
 import { token, useThemeObserver } from '@atlaskit/tokens';
 import { view } from '@forge/bridge';
+import { Context } from 'shared/src/context';
+import { AppError } from 'shared/src/app-error';
+import { getCodeFromCorrespondingBlock } from 'shared/src/confluence/code-blocks';
+import { getPageContent } from 'shared/src/confluence/api-client/browser';
 
 void view.theme.enable();
 
@@ -40,14 +43,21 @@ const Loading: React.FunctionComponent<{ loading?: boolean }> = () => {
 
 function App() {
   const [code, setCode] = useState<string>();
-  const [error, setError] = useState<ServerError | undefined>();
+  const [error, setError] = useState<AppError | undefined>();
   const { colorMode } = useThemeObserver();
 
   useEffect(() => {
-    void getCode()
+    void view
+      .getContext()
+      .then((context) =>
+        getCodeFromCorrespondingBlock(
+          context as unknown as Context,
+          getPageContent,
+        ),
+      ) // TODO
       .then(setCode)
       .catch((error: unknown) => {
-        if (error instanceof ServerError) {
+        if (error instanceof AppError) {
           setError(error);
           return;
         }
@@ -56,7 +66,7 @@ function App() {
         console.error(error);
 
         setError(
-          new ServerError(
+          new AppError(
             'Oops! Something went wrong! Please refresh the page.',
             'UNKNOWN_ERROR',
           ),
@@ -65,7 +75,7 @@ function App() {
       });
   }, []);
 
-  const onError = (error: ServerError) => {
+  const onError = (error: AppError) => {
     setError(error);
   };
 

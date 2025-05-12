@@ -7,8 +7,9 @@ import ForgeReconciler, {
   Stack,
 } from '@forge/react';
 import { view } from '@forge/bridge';
-import { findCodeBlocks, getPageContent } from 'shared/src/confluence';
 import { Config, CONFIG_FIELD } from 'shared/src/config';
+import { getPageContent } from 'shared/src/confluence/api-client/browser';
+import { findCodeBlocks } from 'shared/src/confluence/code-blocks';
 
 const useSubmit = () => {
   const [error, setError] = useState<boolean>();
