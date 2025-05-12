@@ -1,6 +1,43 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "local>atlassian/golden-renovate-config:automated"
+  ],
+  "prConcurrentLimit": 0,
+  "rangeStrategy": "bump",
+  "timezone": "Australia/Sydney",
+  "bbUseDefaultReviewers": true,
+  "bbAutoResolvePrTasks": true,
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "packageRules": [
+    {
+      "groupName": "Forge",
+      "matchPackageNames": ["@forge/*"]
+    },
+    {
+      "groupName": "Atlaskit",
+      "matchPackageNames": ["@atlaskit/*"]
+    },
+    {
+      "groupName": "Atlassian",
+      "matchPackageNames": ["@atlassian/**", "@atlassiansox/**"],
+      "enabled": true
+    },
+    {
+      "groupName": "React",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"]
+    },
+    {
+      "groupName": "Typescript",
+      "matchPackageNames": ["typescript"]
+    },
+    {
+      "groupName": "Vite",
+      "matchPackageNames": ["vite", "@vitejs/*"]
+    },
+    {
+      "groupName": "Lint",
+      "matchPackageNames": ["prettier", "eslint*", "@atlassian/eslint-config-xen", "@typescript-eslint/*"]
+    }
   ]
 }
