@@ -1875,10 +1875,10 @@
     bind-event-listener "^3.0.0"
     raf-schd "^4.0.3"
 
-"@atlaskit/primitives@^14.1.0", "@atlaskit/primitives@^14.4.0", "@atlaskit/primitives@^14.6.0", "@atlaskit/primitives@^14.7.0", "@atlaskit/primitives@^14.8.0", "@atlaskit/primitives@^14.8.3":
-  version "14.8.3"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-14.8.3.tgz#1f52a929c290637d673b39a3560479df37c14ba3"
-  integrity sha512-EZFba15haQRc2O7QSZ0kUmm9rAeLZ5hVIbaNloR9I9djM5fO6t5uTwXniHHSsZhJCvU5JBO8numAAaIIlOlITg==
+"@atlaskit/primitives@^14.1.0", "@atlaskit/primitives@^14.4.0", "@atlaskit/primitives@^14.6.0", "@atlaskit/primitives@^14.7.0", "@atlaskit/primitives@^14.8.0", "@atlaskit/primitives@^14.8.4":
+  version "14.8.4"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/primitives/-/primitives-14.8.4.tgz#04349480b2a77e5db3c46a578363a238da860cd1"
+  integrity sha512-qDtdxiJfjIDJHcYjwZOkIUlhb54xZ5vsDJFXcoqKChjz8mIgQQPPIBPYDL6Z3bGBiKWW7tWYD3Xc/vH2iV8Lmg==
   dependencies:
     "@atlaskit/analytics-next" "^11.1.0"
     "@atlaskit/app-provider" "^2.2.0"
