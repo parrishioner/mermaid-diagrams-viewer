@@ -8,6 +8,6 @@
   "dependencies": {
     "@atlaskit/adf-utils": "^19.20.0",
     "@forge/api": "^5.2.1",
-    "@forge/bridge": "^4.5.3"
+    "@forge/bridge": "^5.0.0"
   }
 }
