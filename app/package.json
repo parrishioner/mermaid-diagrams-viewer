@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@atlassian/eslint-config-xen": "^5.0.1",
-    "@types/node": "^22.15.30",
+    "@types/node": "^22.15.31",
     "@types/react": "^19.1.6",
     "@typescript-eslint/parser": "^8.33.1",
     "eslint": "^9.28.0",
