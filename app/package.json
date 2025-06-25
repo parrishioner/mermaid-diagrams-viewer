@@ -9,7 +9,7 @@
     "@atlassian/eslint-config-xen": "^5.0.1",
     "@types/node": "^22.15.33",
     "@types/react": "^19.1.8",
-    "@typescript-eslint/parser": "^8.34.1",
+    "@typescript-eslint/parser": "^8.35.0",
     "eslint": "^9.29.0",
     "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-react-hooks": "^5.2.0",
