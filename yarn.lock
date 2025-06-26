@@ -3663,15 +3663,15 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@forge/api@^5.3.0":
-  version "5.3.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-5.3.0.tgz#3c4f63d1a2b3355caa776dec4a89e53bc86842bd"
-  integrity sha512-ebrmGpBV/E8vjpQYNFTxzKDzT78ub2UMYQua0Z7ullcRPUBAO5f644qm/IKb7za36d0ci1e+9jM85w6puA1nTw==
+"@forge/api@^6.0.0":
+  version "6.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-6.0.0.tgz#7d0ca98c114a95abf580b98848a00472b7221d53"
+  integrity sha512-9ZPGqIqMglMXjBXf1Pi/Jg5WUIKXbEI4R0/AQZ+D7cv7wCiKMxjiM84JU699yV2CpLS78Sn98pcLZDi+8ObStg==
   dependencies:
     "@forge/auth" "0.0.8"
-    "@forge/egress" "1.4.1"
+    "@forge/egress" "2.0.0"
     "@forge/i18n" "0.0.6"
-    "@forge/storage" "1.8.1"
+    "@forge/storage" "2.0.0"
     "@forge/util" "1.4.9"
     headers-utils "^3.0.2"
 
@@ -3691,10 +3691,10 @@
     "@forge/i18n" "0.0.6"
     "@types/history" "^4.7.11"
 
-"@forge/egress@1.4.1":
-  version "1.4.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/egress/-/egress-1.4.1.tgz#514e6000e93a2e200bc743042e04e9d74a4c3921"
-  integrity sha512-RUHQBsIc3IkQKT46cKSmqHzTfwh7pBbgzXtfGwN14ztcu+1xUqCf71f/LJvq3m4jdymtrQXHE5C8BN0yRGwRKg==
+"@forge/egress@2.0.0":
+  version "2.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/egress/-/egress-2.0.0.tgz#afc46eb3753bab2e9fc452d3484d9d287b8887e6"
+  integrity sha512-PaNleNXpvlcxWC6r7cSpJ/0GmgqqNPE+gojnf67UVwQA0XCYrOZkgFqXu80CF3GHMn9kJxP4tmRNHMsYXcxLhQ==
   dependencies:
     minimatch "^9.0.3"
 
@@ -3723,10 +3723,10 @@
     react-test-renderer "^18.2.0"
     uuid "^9.0.1"
 
-"@forge/storage@1.8.1":
-  version "1.8.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/storage/-/storage-1.8.1.tgz#dbf2c782188d4ffbd5bfbb0da1740e0bfd528c36"
-  integrity sha512-wPssW7sIuoM6aN3xHtO5MFU3bJ/i3mJ1Yo8U10qMegKC0kO+KDe6JE/GTOjoPc0JqtCPCiTnT9OgxFUXzwIElQ==
+"@forge/storage@2.0.0":
+  version "2.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/storage/-/storage-2.0.0.tgz#12225d43c8b46f6d1865aae6f9d7caa75513de90"
+  integrity sha512-orj6wrKISiOVLmxHwaqTbdaGBANrpGD3ckK0VKqrFY+D3ZzeLK+VF1Ppu7u4Wynxy35RnneOLXdjKR8U8Eadvg==
 
 "@forge/util@1.4.9":
   version "1.4.9"
