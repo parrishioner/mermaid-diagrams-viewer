@@ -193,14 +193,14 @@
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.2"
 
-"@atlaskit/banner@^14.0.5":
-  version "14.0.5"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-14.0.5.tgz#c72559a3f9abcedbb0b226dfd8728679610019bb"
-  integrity sha512-WOUjuzFVx9NNfxEvPasDA0dgcDU7mPIYEHAjf0cO48NH4XeQFNr7mXXA/bfnavVC3RPyjZBYHs9gAr5F3EAM1w==
+"@atlaskit/banner@^14.0.6":
+  version "14.0.6"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/banner/-/banner-14.0.6.tgz#b8ba64bb920a6cd85526da172f1b7b31d000728e"
+  integrity sha512-sQIPzntXpwxxkS4ffOFQF5RmhTb/hOboRdEjL+csIMlf8FHSDP2sB6hrzIAdoPL7b3tsAptRzuubBA/4sk5YtA==
   dependencies:
     "@atlaskit/css" "^0.12.0"
     "@atlaskit/primitives" "^14.10.0"
-    "@atlaskit/theme" "^18.0.0"
+    "@atlaskit/theme" "^19.0.0"
     "@atlaskit/tokens" "^5.4.0"
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
@@ -344,13 +344,13 @@
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
 
-"@atlaskit/css-reset@^7.3.2":
-  version "7.3.2"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-7.3.2.tgz#45f3ec60aaef6ee218ab3d4f38506effbd2d5f54"
-  integrity sha512-c5IWgyeuN2nyvUPBchaxFz2c37WrL7WDbD/u2zyXqFoksHYUeCr8Ffcqexy88onmMClzN+cqQLekxdb35RGUnw==
+"@atlaskit/css-reset@^7.3.3":
+  version "7.3.3"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/css-reset/-/css-reset-7.3.3.tgz#8e8d50795db152a9deac1779ad49c6956deb79d6"
+  integrity sha512-Xkl9EsyYb4SGHYjwXTtSgx0kA+5t2XpHfwoToGkNyrryeBMOF9pvk64P8yXV1KiYmc2S/9ce3jKPNnNGdIOQMQ==
   dependencies:
-    "@atlaskit/theme" "^18.0.0"
-    "@atlaskit/tokens" "^5.0.0"
+    "@atlaskit/theme" "^19.0.0"
+    "@atlaskit/tokens" "^5.4.0"
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/css@^0.10.0":
@@ -902,10 +902,10 @@
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
 
-"@atlaskit/icon@^27.2.1":
-  version "27.2.1"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-27.2.1.tgz#49c518b646c483ed602d302cc2520c2a2e6d81d0"
-  integrity sha512-tC2pAPKHxECl3HZoQbYJZthvbNE9U9C23aIJfWCs1pQxvX+rfXMFWpmonN9+DVRQbyyqBq+l2DOudhEjpocJew==
+"@atlaskit/icon@^27.3.0":
+  version "27.3.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-27.3.0.tgz#63ce61667497d3336d51bcc89b725983734d1b21"
+  integrity sha512-xeyw7AVnJCS+TJnUx5rHzoZ6ZJSiRToe/uJP6Wo1Dj5rCooF/gDSNCkQqHfMrLQLYPJp67xDG24DTMK+HcVJ7A==
   dependencies:
     "@atlaskit/platform-feature-flags" "^1.1.0"
     "@atlaskit/tokens" "^5.4.0"
@@ -2268,14 +2268,14 @@
     react-intl-next "npm:react-intl@^5.18.1"
     uuid "^3.1.0"
 
-"@atlaskit/spinner@^18.0.0", "@atlaskit/spinner@^18.0.5":
-  version "18.0.5"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-18.0.5.tgz#d50a2b3adab57da97e4cc15c1dcc76c0209923a2"
-  integrity sha512-h/PUqLQfT5VU8hylEnIc0zOhNotYNV1FBv5aqAF8DuukRPr7OLBEGeveLI/HYBVIxL8fhX5pOmL0juXjFw23Aw==
+"@atlaskit/spinner@^18.0.0", "@atlaskit/spinner@^18.0.6":
+  version "18.0.6"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-18.0.6.tgz#c6a97190bd7fce23c35bcff9950323a15e12bac4"
+  integrity sha512-U0G0tRxHE4Gm8gNylU0ffoAGq+BtkXF7EzpHmIBiEOFjGgS3TSW85Z0tty0x7fdcntpYi37+neKa13xN6xnoyA==
   dependencies:
     "@atlaskit/interaction-context" "^3.0.0"
-    "@atlaskit/theme" "^18.0.0"
-    "@atlaskit/tokens" "^5.0.0"
+    "@atlaskit/theme" "^19.0.0"
+    "@atlaskit/tokens" "^5.4.0"
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
 
@@ -2474,6 +2474,16 @@
     "@atlaskit/codemod-utils" "^4.2.0"
     "@atlaskit/ds-lib" "^4.0.0"
     "@atlaskit/tokens" "^4.3.0"
+    "@babel/runtime" "^7.0.0"
+
+"@atlaskit/theme@^19.0.0":
+  version "19.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/theme/-/theme-19.0.0.tgz#0668fb7322314179e4b2f6f0c39ff208e7c5aa0a"
+  integrity sha512-VKe+O0UsHvpEDfgdnvqbcXxJlI/PA8UcBbUvUrcbG0Nv+bEEazaQmykHepK3k6ePAYhz7fOdnIwvVnQd//Vtsg==
+  dependencies:
+    "@atlaskit/codemod-utils" "^4.2.0"
+    "@atlaskit/ds-lib" "^4.0.0"
+    "@atlaskit/tokens" "^5.4.0"
     "@babel/runtime" "^7.0.0"
 
 "@atlaskit/tmp-editor-statsig@^3.2.0":
