@@ -417,7 +417,7 @@
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
 
-"@atlaskit/icon@^27.3.0", "@atlaskit/icon@^27.5.0", "@atlaskit/icon@^27.5.1":
+"@atlaskit/icon@^27.3.0", "@atlaskit/icon@^27.5.0", "@atlaskit/icon@^27.6.0":
   version "27.6.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/icon/-/icon-27.6.0.tgz#ae88773b7fc23f0807fa03ed857c9c33e33b86fe"
   integrity sha512-0lG4JrpRoVRSbXKJtdX/2czXb5h17hZ/D9yQ9S96BxNGVzwVG6eeLU/p5QlTDd31rGZzzXGi5PH6kM/OzZDtNA==
