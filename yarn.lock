@@ -3003,7 +3003,7 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react-reconciler/-/react-reconciler-0.28.9.tgz"
   integrity sha512-HHM3nxyUZ3zAylX8ZEyrDNd2XZOnQ0D5XfunJF5FLQnZbHHYq4UWvW1QfelQNXv1ICNkwYhfxjwfnqivYB6bFg==
 
-"@types/react@^18.2.64", "@types/react@^18.3.21":
+"@types/react@^18.2.64", "@types/react@^18.3.23":
   version "18.3.23"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react/-/react-18.3.23.tgz"
   integrity sha512-/LDXMQh55EzZQ0uVAZmKKhfENivEvWz6E+EYzh+/MCjMhNsotd+ZHhBGIjFDTi6+fz0OhQQQLbTgdQIxxCsC0w==
