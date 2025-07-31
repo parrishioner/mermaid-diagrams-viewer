@@ -8,6 +8,7 @@ modules:
     - key: mermaid-diagram
       resource: custom-ui
       title: Mermaid diagram
+      icon: resource:icons;app-icon.png
       description: Render a Mermaid diagram from a code block on a page
       categories:
         - formatting
@@ -27,6 +28,8 @@ resources:
       port: 5173
   - key: macro-config
     path: src/config.tsx
+  - key: icons
+    path: icons
 
 permissions:
   scopes:
