@@ -6,9 +6,17 @@
   "directories": {
     "lib": "./src"
   },
+  "scripts": {
+    "test": "vitest run"
+  },
   "dependencies": {
     "@atlaskit/adf-utils": "^19.20.1",
     "@forge/api": "^6.0.2",
     "@forge/bridge": "^5.2.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "typescript": "^5.8.3",
+    "vitest": "^2.1.9"
   }
 }

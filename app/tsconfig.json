@@ -11,7 +11,8 @@
     ],
     "types": [
       "node",
-      "react"
+      "react",
+      "vitest/globals"
     ],
     "baseUrl": "./",
     "allowJs": false,

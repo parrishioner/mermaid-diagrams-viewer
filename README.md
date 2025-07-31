@@ -33,3 +33,18 @@ yarn build # generate static files
 cd app
 forge deploy # deploy to dev environment
 ```
+
+## Testing
+
+```bash
+# Run all tests across all workspaces
+yarn test
+
+# Run tests for a specific workspace
+cd custom-ui && yarn test
+cd app && yarn test  
+cd shared && yarn test
+
+# Run tests with coverage
+yarn test --coverage
+```

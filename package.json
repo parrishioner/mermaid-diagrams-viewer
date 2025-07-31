@@ -11,7 +11,8 @@
     "node": "22"
   },
   "scripts": {
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "test": "yarn workspaces run test"
   },
   "packageManager": "yarn@1.22.22"
 }
