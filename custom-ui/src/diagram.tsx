@@ -44,8 +44,10 @@ export const Diagram: React.FunctionComponent<{
   useEffect(() => {
     const detectIfIsInTheDialog = async () => {
       const context = await view.getContext();
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const modalIsOpen: boolean = context.extension.modal?.modalOpen;
+      const modalIsOpen: boolean = Boolean(
+        (context as { extension: { modal?: { modalOpen?: boolean } } })
+          .extension.modal?.modalOpen,
+      );
       setModalIsOpen(modalIsOpen);
     };
 

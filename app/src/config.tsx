@@ -11,7 +11,7 @@ import { Config, CONFIG_FIELD } from 'shared/src/config';
 import { getPageContent } from 'shared/src/confluence/api-client/browser';
 import { findCodeBlocks } from 'shared/src/confluence/code-blocks';
 
-const useSubmit = () => {
+export const useSubmit = () => {
   const [error, setError] = useState<boolean>();
 
   const submit = async (fields: Config) => {
@@ -31,7 +31,7 @@ const useSubmit = () => {
   };
 };
 
-const DiagramConfig = () => {
+export const DiagramConfig = () => {
   const { submit } = useSubmit();
 
   const [config, setConfig] = useState<Config>({});

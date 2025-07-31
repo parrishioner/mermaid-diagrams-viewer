@@ -68,7 +68,6 @@ function App() {
             'UNKNOWN_ERROR',
           ),
         );
-        throw error;
       });
   }, []);
 

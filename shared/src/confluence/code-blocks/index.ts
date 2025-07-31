@@ -38,7 +38,8 @@ function autoMapMacroToCodeBlock(adf: ADFEntity, moduleKey: string) {
   while (extensions.length > 0) {
     const extension = extensions.shift();
     const codeBlock = codeBlocks.shift();
-    if (extension && codeBlock) {
+    // Code block can be empty string
+    if (extension && codeBlock !== undefined) {
       map.set(extension, codeBlock);
     }
   }
@@ -68,6 +69,7 @@ type Attrs = {
 export async function getCodeFromCorrespondingBlock(
   context: Context,
   getPageContent: GetPageContent,
+  retryDelay = 3000, // Added parameter for retry delay to be used in tests
 ) {
   const extension = context.extension;
 
@@ -81,7 +83,7 @@ export async function getCodeFromCorrespondingBlock(
       );
 
       if (!macroToCodeBlockMap.has(context.localId) && _retryCount < 10) {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, retryDelay));
         return run(_retryCount + 1);
       }
 
