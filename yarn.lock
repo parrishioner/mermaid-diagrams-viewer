@@ -880,7 +880,7 @@
     react-popper "^2.3.0"
     shallow-equal "^3.1.0"
 
-"@atlaskit/spinner@^18.0.0", "@atlaskit/spinner@^18.0.6":
+"@atlaskit/spinner@^18.0.0":
   version "18.0.6"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-18.0.6.tgz"
   integrity sha512-U0G0tRxHE4Gm8gNylU0ffoAGq+BtkXF7EzpHmIBiEOFjGgS3TSW85Z0tty0x7fdcntpYi37+neKa13xN6xnoyA==
@@ -888,6 +888,17 @@
     "@atlaskit/interaction-context" "^3.0.0"
     "@atlaskit/theme" "^19.0.0"
     "@atlaskit/tokens" "^5.4.0"
+    "@babel/runtime" "^7.0.0"
+    "@compiled/react" "^0.18.3"
+
+"@atlaskit/spinner@^19.0.0":
+  version "19.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/spinner/-/spinner-19.0.0.tgz#dbbf86e2b2615193664c265dddee9368a9f1a550"
+  integrity sha512-KVKaiCzn/3TmwkZ46ZaUi1PMQcoYWHxyJABy14Rn9vjLqV9hvWd93fDBtHEUEPGQ0nw2okeDGwhL4Wo2rv/bng==
+  dependencies:
+    "@atlaskit/interaction-context" "^3.0.0"
+    "@atlaskit/theme" "^19.0.0"
+    "@atlaskit/tokens" "^5.6.0"
     "@babel/runtime" "^7.0.0"
     "@compiled/react" "^0.18.3"
 
