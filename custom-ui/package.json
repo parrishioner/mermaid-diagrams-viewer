@@ -10,11 +10,11 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@atlaskit/banner": "^14.0.7",
-    "@atlaskit/css-reset": "^7.3.3",
-    "@atlaskit/icon": "^27.9.0",
-    "@atlaskit/primitives": "^14.11.2",
-    "@atlaskit/spinner": "^19.0.0",
+    "@atlaskit/banner": "^14.0.8",
+    "@atlaskit/css-reset": "^7.3.4",
+    "@atlaskit/icon": "^27.9.2",
+    "@atlaskit/primitives": "^14.11.3",
+    "@atlaskit/spinner": "^19.0.1",
     "@atlaskit/tokens": "^5.6.3",
     "@forge/bridge": "^5.2.0",
     "@fortawesome/fontawesome-free": "^7.0.0",
