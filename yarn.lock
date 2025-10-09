@@ -1107,10 +1107,10 @@
     "@babel/types" "^7.20.0"
     bind-event-listener "^3.0.0"
 
-"@atlaskit/tokens@^6.0.0", "@atlaskit/tokens@^6.3.0", "@atlaskit/tokens@^6.4.0", "@atlaskit/tokens@^6.4.2":
-  version "6.4.2"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-6.4.2.tgz#d1f948cf3d074bb4d43edb94f13573b4ec4210ff"
-  integrity sha512-WaYa+t6eszjMIrXNWhDUy85nTWQWpUeoGxFZnCeCmc0BR3qiKkM+9b04+BgyoNxp1yDj/+pKdAQlOlFkLmiVTw==
+"@atlaskit/tokens@^6.0.0", "@atlaskit/tokens@^6.3.0", "@atlaskit/tokens@^6.4.0", "@atlaskit/tokens@^6.4.3":
+  version "6.4.3"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@atlaskit/tokens/-/tokens-6.4.3.tgz#fe757ed1a7c9ee3fe14494d353808995ed893f03"
+  integrity sha512-r+ycP7uEew17DH4DEjNBSog0+THKC0qibdyO0hwanJboUeny8zP6Wqbdif1JzBBoi/Om+YHjjDTGX9qfB1NHBg==
   dependencies:
     "@atlaskit/ds-lib" "^5.1.0"
     "@atlaskit/platform-feature-flags" "^1.1.0"

@@ -15,7 +15,7 @@
     "@atlaskit/icon": "^28.5.1",
     "@atlaskit/primitives": "^14.15.5",
     "@atlaskit/spinner": "^19.0.5",
-    "@atlaskit/tokens": "^6.4.2",
+    "@atlaskit/tokens": "^6.4.3",
     "@forge/bridge": "^5.5.0",
     "@fortawesome/fontawesome-free": "^7.0.0",
     "mermaid": "^11.12.0",
