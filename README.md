@@ -2,9 +2,10 @@
 
 [![Atlassian license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-A Forge app that renders mermaid diagrams from code blocks in Confluence pages.
+A Forge app (for Confluence cloud) that renders mermaid diagrams from code blocks in Confluence pages.
 
 **Resources:**
+- [About Forge](https://developer.atlassian.com/platform/forge/)
 - [Marketplace listing](https://marketplace.atlassian.com/apps/1232887/mermaid-diagrams-viewer?tab=overview&hosting=cloud)
 - [YouTube demo](https://youtu.be/FwUpc4kd1M4?si=0Odab7ntS5PFSD0z)
 
