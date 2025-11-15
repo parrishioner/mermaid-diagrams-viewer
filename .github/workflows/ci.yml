@@ -211,6 +211,3 @@ jobs:
         run: |
           cd app
           forge deploy -e $FORGE_ENVIRONMENT
-
-      - name: Install
-        run: .github/workflows/forge-install.sh
