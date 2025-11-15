@@ -100,16 +100,7 @@ jobs:
         run: yarn lint
 
       - name: Run forge lint
-        run: |
-          cd app
-          output=$(forge lint 2>&1)
-          echo "$output"
-
-          if echo "$output" | grep -iq "Warning:"; then
-            echo ""
-            echo "⚠️ Found warnings, forcing build failure"
-            exit 1
-          fi
+        run: .github/workflows/forge-lint.sh
 
   deploy-development:
     name: Deploy to Development
@@ -175,7 +166,7 @@ jobs:
     name: Deploy to Production
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    needs: lint
+    needs: deploy-staging
     environment: production
     steps:
       - uses: actions/checkout@v4
