@@ -87,6 +87,7 @@ jobs:
       FORGE_ENVIRONMENT: development
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+      FORGE_INSTALLATION_SITE: ${{ secrets.FORGE_INSTALLATION_SITE }}
     steps:
       - uses: actions/checkout@v4
 
@@ -117,8 +118,10 @@ jobs:
       - name: Deploy to development
         run: |
           cd app
-          forge deploy
-          forge install --upgrade --site dhreben2.atlassian.net --product confluence --non-interactive --environment development
+          forge deploy -e $FORGE_ENVIRONMENT
+
+      - name: Install to development
+        run: .github/workflows/forge-install.sh
 
   deploy-staging:
     name: Deploy to Staging
@@ -130,6 +133,7 @@ jobs:
       FORGE_ENVIRONMENT: staging
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+      FORGE_INSTALLATION_SITE: ${{ secrets.FORGE_INSTALLATION_SITE }}
     steps:
       - uses: actions/checkout@v4
 
@@ -160,8 +164,10 @@ jobs:
       - name: Deploy to staging
         run: |
           cd app
-          forge deploy -e staging
-          forge install --upgrade --site dhreben2.atlassian.net --product confluence --non-interactive -e staging
+          forge deploy -e $FORGE_ENVIRONMENT
+
+      - name: Install to staging
+        run: .github/workflows/forge-install.sh
 
   deploy-production:
     name: Deploy to Production
@@ -173,6 +179,7 @@ jobs:
       FORGE_ENVIRONMENT: production
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+      FORGE_INSTALLATION_SITE: ${{ secrets.FORGE_INSTALLATION_SITE }}
     steps:
       - uses: actions/checkout@v4
 
@@ -203,4 +210,7 @@ jobs:
       - name: Deploy to production
         run: |
           cd app
-          forge deploy -e production
+          forge deploy -e $FORGE_ENVIRONMENT
+
+      - name: Install to production
+        run: .github/workflows/forge-install.sh
