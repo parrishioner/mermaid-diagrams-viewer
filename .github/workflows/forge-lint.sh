@@ -3,7 +3,7 @@ set -euox pipefail
 
 cd app
 
-output=$(forge lint 2>&1)
+output=$(forge lint -e "${FORGE_ENVIRONMENT}" 2>&1)
 echo "$output"
 
 if echo "$output" | grep -iq "Warning:"; then
@@ -11,3 +11,5 @@ if echo "$output" | grep -iq "Warning:"; then
   echo "⚠️ Found warnings, forcing build failure"
   exit 1
 fi
+
+echo "✅ Forge lint passed"

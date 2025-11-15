@@ -84,6 +84,7 @@ jobs:
     needs: [test, build-forge-app, build-custom-ui]
     environment: development
     env:
+      FORGE_ENVIRONMENT: development
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
     steps:
@@ -126,6 +127,7 @@ jobs:
     needs: [test, build-forge-app, build-custom-ui]
     environment: staging
     env:
+      FORGE_ENVIRONMENT: staging
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
     steps:
@@ -168,6 +170,7 @@ jobs:
     needs: deploy-staging
     environment: production
     env:
+      FORGE_ENVIRONMENT: production
       FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
       FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
     steps:
